@@ -1,0 +1,59 @@
+body {
+  font: 14px/25px $primaryFont;
+  /*color: $defaultText;*/
+  color: $white;
+}
+
+// HEADER START
+.header {
+  background: $headerBackground;
+  background-position: 50% 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    // width: $width;
+    width: 1260px;
+    position: relative;
+    color: $white;
+    flex-grow: 1;
+  }
+
+  &__nav {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__item {
+    display: block;
+    margin: 0 20px 10px 0;
+    list-style-type: none;
+
+  }
+
+  &__link {
+    color: $white;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% auto;
+  }
+
+}
+
+// HEADER END

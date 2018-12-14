@@ -1,0 +1,36 @@
+@mixin link {
+  a {
+    &:link {
+      text-decoration: none;
+    }
+    &:visited {
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
+
+;
+
+/*
+@mixin getRow {
+  div[class*="__row"] {
+    @include make-row;
+  }
+};
+*/
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+;
+
+
