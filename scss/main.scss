@@ -1,6 +1,9 @@
-@import "colours-matrix";
-@import "typography";
 @import "variables";
+@import "colours-matrix";
+//@import "media-queries";
+//@import "grid";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "typography";
 @import "mixins";
 @import "styles";
 

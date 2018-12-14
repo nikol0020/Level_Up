@@ -1,6 +1,7 @@
 //Global
 $headerBackground: url(../images/header_background.jpg);
 $headerGradient: linear-gradient(to left, #262526, #287699);
+$width: 1260px;
 
 // Colors
 // ======
@@ -29,6 +30,18 @@ $grayWithOpacity: rgba(128, 128, 128, .5);
 $nevada: #6d6f72;
 
 //Typography
-$primaryFont: "Raleway";
+$primaryFont: "Ubuntu";
 $secondaryFont: "Open Sans";
 $iconFont: "themify";
+$title: "Miami best  Realry—  this";
+
+//Font size
+$fontBigSize: 36px;
+
+// A map of breakpoints.
+$breakpoints: (
+        xs: 576px,
+        sm: 768px,
+        md: 992px,
+        lg: 1200px
+);
