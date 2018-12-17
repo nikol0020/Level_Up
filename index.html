@@ -8,22 +8,21 @@
     <title>Level Miami</title>
 
     <!-- Bootstrap core CSS -->
-
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;subset=latin-ext"
+          rel="stylesheet">
     <link rel="stylesheet" href="fonts/glyphicons-halflings-regular.svg">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-
+    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 </head>
-<body>
-<!--<div class="container-fluid header">
 
-</div>-->
+
+<body class="container-fluid">
 
 <!-- HEADER START -->
-<header class="container-fluid header">
+<header class="header">
     <div class="container header__container">
         <div class="header__container--head">
             <span class="col-md-4 header__head header__head--phone">0800 500 300 255</span>
@@ -35,7 +34,7 @@
             <span class="col-md-4 header__head header__head--note">Call to order</span>
         </div>
     </div>
-    <nav class="col-md-offset-1 col-md-10 col-md-offset-1 container header__nav">
+    <nav class="container header__nav">
         <ul class="header__list">
             <li class="header__item"><a class="header__link" href="#">Home</a></li>
             <li class="header__item"><a class="header__link" href="#">About us</a></li>
@@ -46,23 +45,211 @@
         </ul>
     </nav>
 </header>
-<div class="container-fluid description">
-    <div class="col-md-offset-1 col-md-10 col-md-offset-1 container description__container">
-        <div class="col-md-6 description__title">Miami <b>best</b> Realry
-            <span>—</span>  <br/>
-            <span>this</span></div>
-        <div class="col-md-6 description__article">
-            Over 50 years experience in love.
-            Over 50 years experience in love. Mazel and VA Tsukkerman in his "Analysis of musical works." Pointillism,
-            which originated in the music of the early twentieth century, microforms, found a distant historical.
-            1. The market leader in real estate since 2003
-            2. Awards Real Estate Company, 2010, 2011, 2013 3. More than 200 satisfied customers premium segment
-            4. We focus only on new buildings and high-level doskanalno know this area better than other specialists.
-            5. Working directly with developers - so have more useful information about the profitable deals
+<!-- HEADER END -->
 
-            We will never late! Guaranteed secure transaction - 100%
+<!-- ARTICLE START -->
+<div class=" container description">
+    <div class="description__container">
+        <h2 class="description__title">
+            <div class="description__title--row">Miami <b>best</b></div>
+            <div class="description__title--row">Realry<span class="description__title--color">—</span></div>
+            <div class="description__title--row description__title--color">this</div>
+        </h2>
+        <div class="description__article">
+            <h5 class="description__article__title"><b>Over 50 years experience in love.</b></h5>
+            <p>Mazel and VA Tsukkerman in his "Analysis of musical works." Pointillism,
+                which originated in the music of the early twentieth century, microforms, found a distant
+                historical.</p>
+            <ol class="description__list">
+                <li class="description__item">The market leader in real estate since 2003</li>
+                <li class="description__item">Awards Real Estate Company, 2010, 2011, 2013</li>
+                <li class="description__item">More than 200 satisfied customers premium segment</li>
+                <li class="description__item"> We focus only on new buildings and high-level doskanalno know this area
+                    better than other specialists.
+                </li>
+                <li class="description__item"> Working directly with developers - so have more useful information about
+                    the profitable deals
+                </li>
+            </ol>
+
+            <h5 class="description__article__title">We will never late!</h5>
+            <h5 class="description__article__title">Guaranteed secure transaction - 100%</h5>
         </div>
     </div>
 </div>
+<!-- ARTICLE END -->
+
+<!-- GALLERY START -->
+<div class="container-fluid gallery">
+    <div class="container gallery__content">
+        <div class="gallery__title">
+            <h2 class="gallery__title__caption">gallery</h2>
+            <div class="gallery__title__line">
+                <img src="./images/line.png" alt="underline"/>
+                <img src="./images/crown.png" alt="underline"/>
+                <img src="./images/line.png" alt="underline"/>
+            </div>
+        </div>
+        <figure class="gallery__items">
+            <p class="gallery__item--long"><img src="./images/img1.jpg" alt="Marina Palms" class="gallery_image"></p>
+            <p class="gallery__item--short"><img src="./images/img2.jpg" alt="Marina Palms" class="gallery_image"></p>
+            <!-- <figcaption  class="row gallery__items__note">Marina Palms / North Miami Beach, FL 33162</figcaption>-->
+        </figure>
+        <figure class="gallery__items">
+            <p class="gallery__item--medium"><img src="./images/img3.jpg" alt="Edition Residens" class="gallery_image">
+            </p>
+            <p class="gallery__item--medium"><img src="./images/img3.jpg" alt="Edition Residens" class="gallery_image">
+            </p>
+            <!--  <figcaption  class="row gallery__items__note">Edition Residens / Miami Beach, FL 33139</figcaption>-->
+        </figure>
+        <figure class="gallery__items">
+            <p class="gallery__item--short"><img src="./images/img2.jpg" alt="Edition Residens" class="gallery_image">
+            </p>
+            <p class="gallery__item--long"><img src="./images/img4.jpg" alt="Edition Residens" class="gallery_image">
+            </p>
+            <!-- <figcaption  class="row gallery__items__note">Faena House / Miami Beach, FL 33140</figcaption>-->
+        </figure>
+
+        <div class="gallery__button"><a href="#" class="gallery__button__view--all">view all</a></div>
+    </div>
+</div>
+<!-- GALLERY END -->
+
+<!-- CONSULTATION START -->
+<div class="container-fluid consultation">
+    <div class="container consultation__content">
+        <div class="consultation__title">
+            <h2 class="consultation__title__caption">consultation</h2>
+            <div class="consultation__title__line">
+                <img src="./images/line.png" alt="underline"/>
+                <img src="./images/crown.png" alt="underline"/>
+                <img src="./images/line.png" alt="underline"/>
+            </div>
+        </div>
+
+
+        <section class="consultation__article">
+            <h3 class="consultation__article__title">
+                <div class="consultation__title--row"><b>How long have</b></div>
+                <div class="consultation__title--row"><b>you do yourself a gift?</b></div>
+            </h3>
+            <p class="consultation__article--content">The procedural change mezzo forte starts izoritmichesky pickup at
+                these moments stop LA
+                Mazel and VA Tsukkerman in his "Analysis of musical works."
+                Pointillism, which originated in the music of the early twentieth century, microforms,
+                found a distant historical</p>
+        </section>
+
+        <form action="" class="consultation__form">
+            <input type="text" class="consultation__form__item" value="NAME"/>
+            <input type="text" class="consultation__form__item" value="PHONE"/>
+            <input type="text" class="consultation__form__item" value="EMAIL"/>
+            <input type="text" class="consultation__form__item consultation__form__item--active" value="CONSULTATION"/>
+        </form>
+    </div>
+</div>
+<!-- CONSULTATION END -->
+
+<!-- TESTIMONIALS START -->
+<div class="container-fluid testimonials">
+    <div class="container testimonials__content">
+        <div class="testimonials__title">
+            <h2 class="testimonials__title__caption">testimonials</h2>
+            <div class="testimonials__title__line">
+                <img src="./images/line.png" alt="underline"/>
+                <img src="./images/crown.png" alt="underline"/>
+                <img src="./images/line.png" alt="underline"/>
+            </div>
+        </div>
+        <section class="testimonials__portret">
+            <figure class="testimonials__items">
+                <p class="testimonials__item"><img src="./images/port1.png" alt="Marina Palms"
+                                                   class="testimonials_image"></p>
+                <figcaption class="row testimonials__items__note">
+                    <p class="testimonials__items__note  note__name--block1">Stev Joni</p>
+                    <p class="testimonials__items__note  note__company--block1">Founder Lucoil</p>
+                </figcaption>
+                <figcaption class="testimonials__items__description">
+                    Nice work, Certificates National Association of Realtors (USA).
+                </figcaption>
+            </figure>
+
+            <figure class="testimonials__items">
+                <p class="testimonials__item"><img src="./images/port2.png" alt="Marina Palms"
+                                                   class="testimonials_image"></p>
+                <figcaption class="row testimonials__items__note">
+                    <p class="testimonials__items__note  note__name--block2">Alisher Usmanov</p>
+                    <p class="testimonials__items__note  note__company--block2">Ural Steel</p>
+                </figcaption>
+                <figcaption class="testimonials__items__description">
+                    My soul is illuminated by an unearthly joy, as these beautiful spring morning,
+                    which I enjoy with all my heart. <br/>I'm all alone and blissfully happy in the local edge.
+                </figcaption>
+            </figure>
+
+            <figure class="testimonials__items">
+                <p class="testimonials__item"><img src="./images/port3.png" alt="Marina Palms"
+                                                   class="testimonials_image"></p>
+                <figcaption class="row testimonials__items__note">
+                    <p class="testimonials__items__note  note__name--block3">Алексей Мордашов</p>
+                    <p class="testimonials__items__note  note__company--block3">ГазПром</p>
+                </figcaption>
+                <figcaption class="testimonials__items__description">
+                    When my lovely valley of steam rises and half-day sun is above an impermeable. thicket
+                </figcaption>
+            </figure>
+        </section>
+    </div>
+</div>
+<!-- TESTIMONIALS END -->
+
+
+<!-- CONTACT START -->
+<div class="container-fluid contact">
+    <div class="container contact__content">
+        <div class="contact__title">
+            <h2 class="contact__title__caption">contact</h2>
+            <div class="contact__title__line">
+                <img src="./images/line.png" alt="underline"/>
+                <img src="./images/crown.png" alt="underline"/>
+                <img src="./images/line.png" alt="underline"/>
+            </div>
+        </div>
+
+        <section class="contact__information">
+            <div class="contact__email">Hello@miami.com</div>
+            <div class="contact__phone">
+                <p class="contact__phone--num1">8 800 678 78 78</p>
+                <p class="contact__phone--num2">8 800 700 98 98</p>
+            </div>
+            <div class="contact__address">
+                <p class="contact__address">400 first ave. n.</p>
+                <p class="contact__address">suite 700</p>
+                <p class="contact__address">Minneapolis, MN 55401</p>
+            </div>
+        </section>
+
+        <form action="" class="contact__form">
+            <input type="text" class="contact__form__item" value="NAME"/>
+            <input type="text" class="contact__form__item" value="EMAIL"/>
+            <input type="text" class="contact__form__item" value="MESSAGE"/>
+            <input type="text" class="contact__form__item contact__form__item--active" value="WRITE TO US"/>
+        </form>
+    </div>
+</div>
+<!-- CONTACT END -->
+
+<!-- FOOTER START -->
+<div class="container-fluid footer">
+    <div class="container footer__container">
+        <div class="footer__content">
+            <a class="footer__link" href="#"><img class="footer__image" src="./images/logo.png" alt="Logo"></a>
+        </div>
+        <div class="footer__copyright">@ 2013 MIAMI</div>
+    </div>
+</div>
+<!-- FOOTER END -->
+
+
 </body>
 </html>

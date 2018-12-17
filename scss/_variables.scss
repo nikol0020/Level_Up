@@ -1,5 +1,8 @@
+//@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
 //Global
 $headerBackground: url(../images/header_background.jpg);
+$footerBackground: url(../images/footer_img.jpg);
 $headerGradient: linear-gradient(to left, #262526, #287699);
 $width: 1260px;
 
@@ -30,13 +33,14 @@ $grayWithOpacity: rgba(128, 128, 128, .5);
 $nevada: #6d6f72;
 
 //Typography
-$primaryFont: "Ubuntu";
+$primaryFont:  "Ubuntu";
 $secondaryFont: "Open Sans";
 $iconFont: "themify";
 $title: "Miami best  Realry—  this";
 
 //Font size
-$fontBigSize: 36px;
+$fontBigSize: 48px;
+$fontSmallSize: 20px;
 
 // A map of breakpoints.
 $breakpoints: (

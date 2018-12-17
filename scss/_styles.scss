@@ -1,6 +1,7 @@
 body {
   font: 14px/25px $primaryFont;
   color: $defaultText;
+  box-sizing: border-box;
 }
 
 // HEADER START
@@ -10,8 +11,7 @@ body {
   background-position: 50% 35%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 900px;
-//  position: relative;
+  height: 1000px;
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
@@ -19,7 +19,6 @@ body {
   color: $logoColor;
 
   &__container {
-   // @extend .container;
     @include make-md-column-offset(1);
     @include make-md-column(10);
     @include make-md-column-offset(1);
@@ -31,7 +30,7 @@ body {
     &--head {
       display: flex;
       justify-content: center;
-      margin: 2% auto;
+      margin: 5% auto;
     }
 
   }
@@ -54,16 +53,19 @@ body {
   }
 
   &__nav {
+    /* @include make-md-column-offset(1);
+     @include make-md-column(10);
+     @include make-md-column-offset(1);*/
     width: 100%;
-    margin-bottom: 5%;
+    margin-bottom: 30px;
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    /* margin: 15px;*/
+    padding: 0 15px;
   }
 
   &__item {
@@ -81,26 +83,357 @@ body {
 
 // HEADER END
 
-//DESCRIPTION
-
+//ARTICLE
 .description {
+  margin: 20px 0;
+  background: $fontBackgroundSectionEven;
 
   &__container {
-    margin: 5%;
     width: $width;
   }
 
   &__title {
+    @include make-md-column(4);
     text-transform: uppercase;
-    text-align: right;
-    font-size: $fontDescriptionSize;
+    font-size: $fontTitleSize;
+    margin: 5% 0;
+
+    &--row {
+      text-align: left;
+    }
+
+    &--color {
+      color: $fontTitleMarkColor;
+    }
+
   }
 
   &__article {
+    @include make-md-column(5);
     text-align: left;
+    float: right;
+    margin: 5% 0;
+
+    &__title {
+      font-weight: bold;
+    }
   }
 
+  &__list {
+    padding: 0;
+    margin: 30px 0;
+  }
 
 }
-//DESCRIPTION END
+
+//ARTICLE END
+
+//GALLERY START
+.gallery {
+
+  background: $fontBackgroundSectionOdd;
+
+  &__content {
+
+    margin: -45px 0 100px 0;
+
+  }
+
+  &__title {
+
+    &__caption {
+
+      text-transform: uppercase;
+      text-align: center;
+      font-size: $fontTitleSize;
+    }
+
+    &__line {
+      text-align: center;
+    }
+
+  }
+
+  &_image {
+    width: 100%;
+  }
+
+  &__items {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-evenly;
+
+    /*   &__note {
+         @include make-md-column(10)
+
+       }*/
+
+  }
+
+  &__item {
+
+    &--long {
+      @include make-md-column(8);
+
+    }
+
+    &--medium {
+      @include make-md-column(6);
+    }
+
+    &--short {
+      @include make-md-column(4);
+    }
+
+  }
+
+  &__button {
+    @include make-md-column(12);
+    text-align: center;
+    margin-top: 20px;
+
+    &__view--all {
+      padding: 13px 50px;
+      text-transform: uppercase;
+      font-size: inherit;
+      background: $fontBackgroundButtonActive;
+      color: $defaultFill;
+    }
+
+  }
+}
+
+//GALLERY END
+
+//CONSULTATION START
+.consultation {
+  background: $fontBackgroundSectionEven;
+
+  &__content {
+    margin: -45px 0 100px 0;
+  }
+
+  &__container {
+    width: $width;
+  }
+
+  &__article {
+    @include make-md-column(6);
+    text-align: left;
+    float: right;
+    margin: 5% 0;
+
+    &__title {
+      font-weight: bold;
+
+      &--row {
+        text-align: left;
+      }
+    }
+
+    &--content {
+      font-size: $fontDescriptionSize;
+    }
+  }
+
+  &__title {
+
+    &__caption {
+
+      text-transform: uppercase;
+      text-align: center;
+      font-size: $fontTitleSize;
+    }
+
+    &__line {
+      text-align: center;
+    }
+
+  }
+
+  &_image {
+    width: 100%;
+  }
+
+  &__items {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__form {
+    @include make-md-column-offset(1);
+    @include make-md-column(5);
+    margin: 6% 0;
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      margin: 5px 0;
+      padding: 15px;
+      text-align: center;
+
+      &--active {
+        color: $colorActive;
+        background: $fontBackgroundButtonActive;
+      }
+    }
+
+  }
+}
+
+//CONSULTATION END
+
+//TESTIMONIALS START
+.testimonials {
+
+  background: $fontBackgroundSectionOdd;
+
+  &__content {
+    margin: -45px 0 100px 0;
+  }
+
+  &__portret {
+    margin: 50px 0;
+  }
+
+  &__title {
+
+    &__caption {
+
+      text-transform: uppercase;
+      text-align: center;
+      font-size: $fontTitleSize;
+    }
+
+    &__line {
+      text-align: center;
+    }
+
+  }
+
+  &_image {
+    width: 100%;
+  }
+
+  &__items {
+    @include make-md-column-offset(1);
+    @include make-md-column(3);
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: 30%;
+      left: -5%;
+      content: '';
+      background: url(../images/quotes.png) no-repeat;
+      width: 40px;
+      height: 40px;
+    }
+
+    &__note {
+      text-align: center;
+    }
+
+    &__description {
+      text-align: center;
+    }
+  }
+}
+
+//TESTIMONIALS END
+
+//CONTACT START
+.contact {
+
+  background: $fontBackgroundSectionEven;
+
+  &__content {
+    margin: -45px 0 100px 0;
+  }
+
+  &__title {
+
+    &__caption {
+
+      text-transform: uppercase;
+      text-align: center;
+      font-size: $fontTitleSize;
+    }
+
+    &__line {
+      text-align: center;
+    }
+
+  }
+
+  &__information {
+    @include make-md-column(6);
+    margin: 6% 0;
+    font-size: $fontDescriptionSize;
+  }
+
+  &__form {
+    @include make-md-column-offset(1);
+    @include make-md-column(5);
+    margin: 6% 0;
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      margin: 5px 0;
+      padding: 15px;
+      text-align: center;
+
+      &--active {
+        color: $colorActive;
+        background: $fontBackgroundButtonActive;
+      }
+    }
+
+  }
+
+}
+
+//CONTACT END
+
+//FOOTER START
+.footer {
+  @include make-md-column(12);
+  background: $footerBackground;
+  background-position: 50% 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  color: $logoColor;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__content {
+    @include make-md-column(12);
+    width: $width;
+    position: relative;
+    color: $white;
+    flex-grow: 1;
+    text-align: center;
+    margin-top: 35%;
+
+  }
+
+  &__copyright {
+    @include make-md-column(12);
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+}
+//FOOTER END
 

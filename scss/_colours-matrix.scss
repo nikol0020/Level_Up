@@ -2,6 +2,7 @@
 $defaultText: $mineShaft;
 //$defaultLink: $flamePea;
 $defaultFill: $white;
+$defaultFont: $primaryFont;
 //
 //
 //// HEADER
@@ -16,4 +17,13 @@ $descriptionTitle: $title;
 
 
 //Font size
-$fontDescriptionSize: $fontBigSize;
+$fontTitleSize: $fontBigSize;
+$fontDescriptionSize: $fontSmallSize;
+//$fontConsultationSize: $fontSmallSize;
+
+//Font color
+$fontTitleMarkColor: $blue;
+$fontBackgroundSectionOdd: $alto;
+$fontBackgroundSectionEven: $white;
+$fontBackgroundButtonActive: $blue;
+$colorActive: $white;
