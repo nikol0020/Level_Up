@@ -8,6 +8,7 @@
     }
     &:hover {
       text-decoration: none;
+      color: $colorHover;
     }
     &:active {
       text-decoration: none;
@@ -15,22 +16,59 @@
   }
 }
 
-;
+@mixin formItem() {
+  margin: 5px 0;
+  padding: 15px;
+  text-align: center;
+  background: $fontBackgroundSectionOdd;
+  border: none;
+  font-weight: 500;
 
-/*
-@mixin getRow {
+  &[type="text"]::-webkit-input-placeholder {
+    color: $defaultText;
+  }
+
+  &--active {
+    background: $fontBackgroundButton;
+    &[type="text"]::-webkit-input-placeholder {
+      color: $colorActive;
+    }
+  }
+}
+
+@mixin title_section() {
+
+  &__title {
+
+    &__caption {
+
+      text-transform: uppercase;
+      text-align: center;
+      font-size: $fontTitleSize;
+      font-weight: lighter;
+    }
+
+    &__line {
+      text-align: center;
+     /* display: inline-flex;
+      align-items: center;
+      justify-content: space-between;*/
+    }
+
+  }
+}
+
+
+/*@mixin getRow {
   div[class*="__row"] {
     @include make-row;
   }
 };
-*/
 
 @mixin pseudo($display: block, $pos: absolute, $content: '') {
   content: $content;
   display: $display;
   position: $pos;
-}
-
-;
+};*/
 
 

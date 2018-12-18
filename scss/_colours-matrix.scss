@@ -3,27 +3,28 @@ $defaultText: $mineShaft;
 //$defaultLink: $flamePea;
 $defaultFill: $white;
 $defaultFont: $primaryFont;
-//
-//
+
+
 //// HEADER
 //$headerLinkColor: $white;
-//$headerBorderColor: $white;
 $logoColor: $white;
-//$headerButtonBackgroundColor: $white;
-//$headerButtonHoverColor: $white;
 
 //DESCRIPTION
 $descriptionTitle: $title;
+
+//Button
+$defaultButtonColor: $white;
+$fontBackgroundButton: $dodgerBlue;
 
 
 //Font size
 $fontTitleSize: $fontBigSize;
 $fontDescriptionSize: $fontSmallSize;
-//$fontConsultationSize: $fontSmallSize;
 
 //Font color
-$fontTitleMarkColor: $blue;
+$fontTitleMarkColor: $dodgerBlue;
 $fontBackgroundSectionOdd: $alto;
 $fontBackgroundSectionEven: $white;
-$fontBackgroundButtonActive: $blue;
 $colorActive: $white;
+$colorHover: $redOrange;
+$colorLink: $white;
