@@ -14,52 +14,68 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 </head>
 
 
-<body class="container-fluid">
+<body>
 
 <!-- HEADER START -->
 <header class="header">
     <div class="container header__container">
-        <div class="header__container--head">
-            <span class="col-md-4 header__head header__head--phone">0800 500 300 255</span>
-            <span class="col-md-4 header__head header__head--logo">
-                    <a class="header__head--link" href="#">
-                        <img class="header__head--image" src="./images/logo.png" alt="Logo">
-                    </a>
-                </span>
-            <span class="col-md-4 header__head header__head--note">Call to order</span>
+        <div class="header__head">
+            <span class="header__head header__head--phone">0800 500 300 255</span><!-- сделать элементами-->
+            <div class="header__head header__head--logo"></div>
+            <span class="header__head header__head--note">Call to order</span>
         </div>
     </div>
     <nav class="container header__nav">
         <ul class="header__list">
-            <li class="header__item"><a class="header__link" href="#">Home</a></li>
-            <li class="header__item"><a class="header__link" href="#">About us</a></li>
-            <li class="header__item"><a class="header__link" href="#">Gallery</a></li>
-            <li class="header__item"><a class="header__link" href="#">Consultation</a></li>
-            <li class="header__item"><a class="header__link" href="#">Testimonials</a></li>
-            <li class="header__item"><a class="header__link" href="#">Contacts</a></li>
+            <li class="header__item">
+                <a class="header__item header__link" href="#">Home</a>
+            </li>
+            <li class="header__item">
+                <a class="header__item header__link" href="#">About us</a>
+            </li>
+            <li class="header__item">
+                <a class="header__item header__link" href="#">Gallery</a>
+            </li>
+            <li class="header__item">
+                <a class="header__item header__link" href="#">Consultation</a>
+            </li>
+            <li class="header__item">
+                <a class="header__item header__link" href="#">Testimonials</a>
+            </li>
+            <li class="header__item">
+                <a class="header__item header__link" href="#">Contacts</a>
+            </li>
         </ul>
     </nav>
 </header>
 <!-- HEADER END -->
 
 <!-- ARTICLE START -->
-<div class=" container description">
-    <div class="description__container">
-        <h2 class="description__title">
-            <div class="description__title--row">Miami <b>best</b></div>
-            <div class="description__title--row">Realry<span class="description__title--color">—</span></div>
-            <div class="description__title--row description__title--color">this</div>
-        </h2>
-        <div class="description__article">
-            <h5 class="description__article__title"><b>Over 50 years experience in love.</b></h5>
-            <p>Mazel and VA Tsukkerman in his "Analysis of musical works." Pointillism,
-                which originated in the music of the early twentieth century, microforms, found a distant
-                historical.</p>
+<section class="description">
+     <div class="container description__container">
+        <div class="description__title"> <!--переделать тайтл спанами+--->
+            <div class="row">
+            <span class="description__title description__row">Miami
+                <span class="description__row description__text-bold">best</span>
+            </span>
+            </div>
+            <div class="row">
+            <span class="description__title description__row">Realry
+                <span class="description__row description__text-color">—</span>
+            </span>
+            </div>
+            <div class="row">
+            <span class="description__title description__row description__text-color">this</span>
+            </div>
+        </div>
+        <article class="description__article">
+            <h5 class="description__article-title"><b>Over 50 years experience in love.</b></h5>
+            <p class="description__text">Mazel and VA Tsukkerman in his "Analysis of musical works."
+                Pointillism,which originated in the music of the early twentieth century, microforms,
+                found a distant historical.</p>
             <ol class="description__list">
                 <li class="description__item">The market leader in real estate since 2003</li>
                 <li class="description__item">Awards Real Estate Company, 2010, 2011, 2013</li>
@@ -72,19 +88,19 @@
                 </li>
             </ol>
 
-            <h5 class="description__article__title">We will never late!</h5>
-            <h5 class="description__article__title">Guaranteed secure transaction - 100%</h5>
-        </div>
+            <h5 class="description__article-title">We will never late!</h5>
+            <h5 class="description__article-title">Guaranteed secure transaction - 100%</h5>
+        </article>
     </div>
-</div>
+</section>
 <!-- ARTICLE END -->
 
 <!-- GALLERY START -->
-<div class="container-fluid gallery">
+<section class="container-fluid gallery">
     <div class="container gallery__content">
         <div class="gallery__title">
-            <h2 class="gallery__title__caption">gallery</h2>
-            <div class="gallery__title__line">
+            <h2 class="gallery__title gallery__title--caption">gallery</h2>
+            <div class="gallery__title gallery__title--line">
                 <img src="./images/line.png" alt="underline"/>
                 <img src="./images/crown.png" alt="underline"/>
                 <img src="./images/line.png" alt="underline"/>
@@ -93,34 +109,34 @@
         <figure class="gallery__items">
             <p class="gallery__item--long"><img src="./images/img1.jpg" alt="Marina Palms" class="gallery_image"></p>
             <p class="gallery__item--short"><img src="./images/img2.jpg" alt="Marina Palms" class="gallery_image"></p>
-            <!-- <figcaption  class="row gallery__items__note">Marina Palms / North Miami Beach, FL 33162</figcaption>-->
+            <figcaption class="row gallery__items__note">Marina Palms / <span class="gallery__items__note1">North Miami Beach, FL 33162</span></figcaption>
         </figure>
         <figure class="gallery__items">
             <p class="gallery__item--medium"><img src="./images/img3.jpg" alt="Edition Residens" class="gallery_image">
             </p>
             <p class="gallery__item--medium"><img src="./images/img3.jpg" alt="Edition Residens" class="gallery_image">
             </p>
-            <!--  <figcaption  class="row gallery__items__note">Edition Residens / Miami Beach, FL 33139</figcaption>-->
+            <figcaption class="row gallery__items__note">Edition Residens /<span class="gallery__items__note1"> Miami Beach, FL 33139</span></figcaption>
         </figure>
         <figure class="gallery__items">
             <p class="gallery__item--short"><img src="./images/img2.jpg" alt="Edition Residens" class="gallery_image">
             </p>
             <p class="gallery__item--long"><img src="./images/img4.jpg" alt="Edition Residens" class="gallery_image">
             </p>
-            <!-- <figcaption  class="row gallery__items__note">Faena House / Miami Beach, FL 33140</figcaption>-->
+            <figcaption class="row gallery__items__note">Faena House / <span class="gallery__items__note1">Miami Beach, FL 33140</span></figcaption>
         </figure>
 
         <div class="gallery__button"><a href="#" class="gallery__button__view--all">view all</a></div>
     </div>
-</div>
+</section>
 <!-- GALLERY END -->
 
 <!-- CONSULTATION START -->
-<div class="container-fluid consultation">
+<section class="container-fluid consultation">
     <div class="container consultation__content">
         <div class="consultation__title">
-            <h2 class="consultation__title__caption">consultation</h2>
-            <div class="consultation__title__line">
+            <h2 class="consultation__title consultation__title--caption">consultation</h2>
+            <div class="consultation__title consultation__title--line">
                 <img src="./images/line.png" alt="underline"/>
                 <img src="./images/crown.png" alt="underline"/>
                 <img src="./images/line.png" alt="underline"/>
@@ -128,7 +144,7 @@
         </div>
 
 
-        <section class="consultation__article">
+        <article class="consultation__article">
             <h3 class="consultation__article__title">
                 <div class="consultation__title--row"><b>How long have</b></div>
                 <div class="consultation__title--row"><b>you do yourself a gift?</b></div>
@@ -138,24 +154,25 @@
                 Mazel and VA Tsukkerman in his "Analysis of musical works."
                 Pointillism, which originated in the music of the early twentieth century, microforms,
                 found a distant historical</p>
-        </section>
+        </article>
 
         <form action="" class="consultation__form">
-            <input type="text" class="consultation__form__item" value="NAME"/>
-            <input type="text" class="consultation__form__item" value="PHONE"/>
-            <input type="text" class="consultation__form__item" value="EMAIL"/>
-            <input type="text" class="consultation__form__item consultation__form__item--active" value="CONSULTATION"/>
+            <input type="text" class="consultation__form__item" placeholder="NAME"/>
+            <input type="text" class="consultation__form__item" placeholder="PHONE"/>
+            <input type="text" class="consultation__form__item" placeholder="EMAIL"/>
+            <input type="text" class="consultation__form__item consultation__form__item--active"
+                   placeholder="CONSULTATION"/>
         </form>
     </div>
-</div>
+</section>
 <!-- CONSULTATION END -->
 
 <!-- TESTIMONIALS START -->
-<div class="container-fluid testimonials">
+<section class="container-fluid testimonials">
     <div class="container testimonials__content">
         <div class="testimonials__title">
-            <h2 class="testimonials__title__caption">testimonials</h2>
-            <div class="testimonials__title__line">
+            <h2 class="testimonials__title testimonials__title--caption">testimonials</h2>
+            <div class="testimonials__title testimonials__title--line">
                 <img src="./images/line.png" alt="underline"/>
                 <img src="./images/crown.png" alt="underline"/>
                 <img src="./images/line.png" alt="underline"/>
@@ -200,16 +217,16 @@
             </figure>
         </section>
     </div>
-</div>
+</section>
 <!-- TESTIMONIALS END -->
 
 
 <!-- CONTACT START -->
-<div class="container-fluid contact">
+<section class="container-fluid contact">
     <div class="container contact__content">
         <div class="contact__title">
-            <h2 class="contact__title__caption">contact</h2>
-            <div class="contact__title__line">
+            <h2 class="contact__title contact__title--caption">contact</h2>
+            <div class="contact__title contact__title--line">
                 <img src="./images/line.png" alt="underline"/>
                 <img src="./images/crown.png" alt="underline"/>
                 <img src="./images/line.png" alt="underline"/>
@@ -229,25 +246,26 @@
             </div>
         </section>
 
-        <form action="" class="contact__form">
-            <input type="text" class="contact__form__item" value="NAME"/>
-            <input type="text" class="contact__form__item" value="EMAIL"/>
-            <input type="text" class="contact__form__item" value="MESSAGE"/>
-            <input type="text" class="contact__form__item contact__form__item--active" value="WRITE TO US"/>
+        <form action="#" class="contact__form" method="post">
+            <input type="text" class="contact__form__item" placeholder="NAME"/>
+            <input type="text" class="contact__form__item" placeholder="EMAIL"/>
+            <input type="text" class="contact__form__item contact__form__item--message"/>
+            <span class="contact__form__item--text">MESSAGE</span>
+            <input type="text" class="contact__form__item contact__form__item--active" placeholder="WRITE TO US"/>
         </form>
     </div>
-</div>
+</section>
 <!-- CONTACT END -->
 
 <!-- FOOTER START -->
-<div class="container-fluid footer">
+<footer class="container-fluid footer">
     <div class="container footer__container">
         <div class="footer__content">
-            <a class="footer__link" href="#"><img class="footer__image" src="./images/logo.png" alt="Logo"></a>
+            <div class="footer__content--logo"></div>
         </div>
-        <div class="footer__copyright">@ 2013 MIAMI</div>
+        <div class="footer__copyright">@ 2013 MIAMI. </div>
     </div>
-</div>
+</footer>
 <!-- FOOTER END -->
 
 

@@ -26,25 +26,20 @@ body {
     position: relative;
     color: $defaultFill;
     flex-grow: 1;
-
-    &--head {
-      display: flex;
-      justify-content: center;
-      margin: 5% auto;
-      line-height: 10;
-    }
-
   }
 
   &__head {
+    @include make-md-column(12);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin: 2% auto;
-    width: 100%;
+    margin-top: 50px;
+    line-height: 15;
 
     &--logo {
+      @include make-md-column-offset(1);
       @include make-md-column(2);
+      @include make-md-column-offset(1);
       text-align: center;
       background: url(../images/logo.svg) no-repeat;
       padding: 50px;
@@ -55,17 +50,20 @@ body {
       @include make-md-column(4);
       text-align: left;
       display: inline;
+      margin: 0;
     }
 
     &--note {
       @include make-md-column(4);
       text-align: right;
       display: inline;
+      margin: 0;
     }
 
   }
 
   &__nav {
+    @include make-md-column(12);
     width: 100%;
     margin-bottom: 30px;
   }
@@ -94,36 +92,47 @@ body {
 
 //ARTICLE
 .description {
+  @include make-md-column(12);
   margin: 20px 0;
   background: $fontBackgroundSectionEven;
 
   &__container {
+
     width: $width;
   }
 
   &__title {
-    @include make-md-column(4);
+    @include make-md-column(5);
     text-transform: uppercase;
     font-size: $fontTitleSize;
+    font-weight: lighter;
+    text-align: left;
     margin: 5% 0;
-
-    &--row {
-      text-align: left;
-    }
-
-    &--color {
-      color: $fontTitleMarkColor;
-    }
+    line-height: 0;
+    display: block;
 
   }
 
+  .description__title.description__row {
+    width: auto;
+    margin: 30px 0;
+  }
+
+  &__text-bold {
+    font-weight: 500;
+
+  }
+
+  &__text-color {
+    color: $fontTitleMarkColor;
+  }
+
   &__article {
-    @include make-md-column(5);
+    @include make-md-column(6);
     text-align: left;
-    float: right;
     margin: 5% 0;
 
-    &__title {
+    &__article-title {
       font-weight: bold;
     }
   }
@@ -139,7 +148,7 @@ body {
 
 //GALLERY START
 .gallery {
-
+  @include make-md-column(12);
   @include title_section ();
   background: $fontBackgroundSectionOdd;
 
@@ -209,7 +218,7 @@ body {
 
 //CONSULTATION START
 .consultation {
-
+  @include make-md-column(12);
   @include title_section ();
   background: $fontBackgroundSectionEven;
 
@@ -268,7 +277,7 @@ body {
 
 //TESTIMONIALS START
 .testimonials {
-
+  @include make-md-column(12);
   @include title_section ();
   background: $fontBackgroundSectionOdd;
 
@@ -317,7 +326,7 @@ body {
 
 //CONTACT START
 .contact {
-
+  @include make-md-column(12);
   @include title_section ();
   background: $fontBackgroundSectionEven;
 

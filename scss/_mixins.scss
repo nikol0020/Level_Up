@@ -40,7 +40,7 @@
 
   &__title {
 
-    &__caption {
+    &--caption {
 
       text-transform: uppercase;
       text-align: center;
@@ -48,7 +48,7 @@
       font-weight: lighter;
     }
 
-    &__line {
+    &--line {
       text-align: center;
      /* display: inline-flex;
       align-items: center;
