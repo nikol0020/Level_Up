@@ -20,7 +20,13 @@
 <body>
 
 <!-- HEADER START -->
-<header class="header">
+<header class="container-fluid header">
+    <!--<div id="nav-btn"></div>
+    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>-->
     <div class="container header__container">
         <div class="header__head">
             <span class="header__head header__head--phone">0800 500 300 255</span><!-- сделать элементами-->
@@ -54,7 +60,7 @@
 <!-- HEADER END -->
 
 <!-- ARTICLE START -->
-<section class="description">
+<section class="container-fluid description">
      <div class="container description__container">
         <div class="description__title"> <!--переделать тайтл спанами+--->
             <div class="row">
@@ -109,24 +115,24 @@
         <figure class="gallery__items">
             <p class="gallery__item--long"><img src="./images/img1.jpg" alt="Marina Palms" class="gallery_image"></p>
             <p class="gallery__item--short"><img src="./images/img2.jpg" alt="Marina Palms" class="gallery_image"></p>
-            <figcaption class="row gallery__items__note">Marina Palms / <span class="gallery__items__note1">North Miami Beach, FL 33162</span></figcaption>
+            <figcaption class="row gallery__note">Marina Palms / <span class="gallery__note--color">North Miami Beach, FL 33162</span></figcaption>
         </figure>
         <figure class="gallery__items">
             <p class="gallery__item--medium"><img src="./images/img3.jpg" alt="Edition Residens" class="gallery_image">
             </p>
             <p class="gallery__item--medium"><img src="./images/img3.jpg" alt="Edition Residens" class="gallery_image">
             </p>
-            <figcaption class="row gallery__items__note">Edition Residens /<span class="gallery__items__note1"> Miami Beach, FL 33139</span></figcaption>
+            <figcaption class="row gallery__note">Edition Residens /<span class="gallery__note--color"> Miami Beach, FL 33139</span></figcaption>
         </figure>
         <figure class="gallery__items">
             <p class="gallery__item--short"><img src="./images/img2.jpg" alt="Edition Residens" class="gallery_image">
             </p>
             <p class="gallery__item--long"><img src="./images/img4.jpg" alt="Edition Residens" class="gallery_image">
             </p>
-            <figcaption class="row gallery__items__note">Faena House / <span class="gallery__items__note1">Miami Beach, FL 33140</span></figcaption>
+            <figcaption class="row gallery__note">Faena House / <span class="gallery__note--color">Miami Beach, FL 33140</span></figcaption>
         </figure>
 
-        <div class="gallery__button"><a href="#" class="gallery__button__view--all">view all</a></div>
+        <div class="gallery__button"><a href="#" class="gallery__button--name">view all</a></div>
     </div>
 </section>
 <!-- GALLERY END -->
@@ -145,11 +151,11 @@
 
 
         <article class="consultation__article">
-            <h3 class="consultation__article__title">
+            <h3 class="consultation__article_title">
                 <div class="consultation__title--row"><b>How long have</b></div>
                 <div class="consultation__title--row"><b>you do yourself a gift?</b></div>
             </h3>
-            <p class="consultation__article--content">The procedural change mezzo forte starts izoritmichesky pickup at
+            <p class="consultation__article_content">The procedural change mezzo forte starts izoritmichesky pickup at
                 these moments stop LA
                 Mazel and VA Tsukkerman in his "Analysis of musical works."
                 Pointillism, which originated in the music of the early twentieth century, microforms,
@@ -157,10 +163,10 @@
         </article>
 
         <form action="" class="consultation__form">
-            <input type="text" class="consultation__form__item" placeholder="NAME"/>
-            <input type="text" class="consultation__form__item" placeholder="PHONE"/>
-            <input type="text" class="consultation__form__item" placeholder="EMAIL"/>
-            <input type="text" class="consultation__form__item consultation__form__item--active"
+            <input type="text" class="consultation__form_item" placeholder="NAME"/>
+            <input type="text" class="consultation__form_item" placeholder="PHONE"/>
+            <input type="text" class="consultation__form_item" placeholder="EMAIL"/>
+            <input type="text" class="consultation__form_item consultation__form_item--active"
                    placeholder="CONSULTATION"/>
         </form>
     </div>
@@ -247,11 +253,11 @@
         </section>
 
         <form action="#" class="contact__form" method="post">
-            <input type="text" class="contact__form__item" placeholder="NAME"/>
-            <input type="text" class="contact__form__item" placeholder="EMAIL"/>
-            <input type="text" class="contact__form__item contact__form__item--message"/>
-            <span class="contact__form__item--text">MESSAGE</span>
-            <input type="text" class="contact__form__item contact__form__item--active" placeholder="WRITE TO US"/>
+            <input type="text" class="contact__form_item" placeholder="NAME"/>
+            <input type="text" class="contact__form_item" placeholder="EMAIL"/>
+            <input type="text" class="contact__form_item contact__form_item--message"/>
+            <span class="contact__form_item--text">MESSAGE</span>
+            <input type="text" class="contact__form_item contact__form_item--active" placeholder="WRITE TO US"/>
         </form>
     </div>
 </section>
