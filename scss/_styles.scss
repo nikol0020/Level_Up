@@ -155,7 +155,7 @@ body {
   &__content {
 
     @include title_section ();
-    margin: -45px 0 100px 0;
+    margin: -48px 0 100px 0;
 
   }
 
@@ -168,16 +168,22 @@ body {
     display: flex;
     justify-content: space-evenly;
     position: relative;
+  }
 
-    &__note {
-      position: absolute;
-      bottom: -25px;
-      left: 30px;
-    }
 
-    &__note1 {
+  &__note {
+    position: absolute;
+    bottom: -25px;
+    left: 30px;
+
+    &--color {
       color: $fontBackgroundButton;
     }
+
+  }
+
+  &--color {
+    color: $fontBackgroundButton;
   }
 
   &__item {
@@ -203,7 +209,7 @@ body {
     text-align: center;
     margin-top: 20px;
 
-    &__view--all {
+    &--name {
       padding: 13px 50px;
       text-transform: uppercase;
       font-size: inherit;
@@ -223,7 +229,7 @@ body {
   background: $fontBackgroundSectionEven;
 
   &__content {
-    margin: -45px 0 100px 0;
+    margin: -48px 0 100px 0;
   }
 
   &__container {
@@ -236,7 +242,7 @@ body {
     float: right;
     margin: 5% 0;
 
-    &__title {
+    &_title {
       font-weight: bold;
 
       &--row {
@@ -244,7 +250,7 @@ body {
       }
     }
 
-    &--content {
+    &_content {
       font-size: $fontDescriptionSize;
     }
   }
@@ -266,7 +272,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    &__item {
+    &_item {
       @include formItem();
     }
 
@@ -282,7 +288,7 @@ body {
   background: $fontBackgroundSectionOdd;
 
   &__content {
-    margin: -45px 0 100px 0;
+    margin: -48px 0 100px 0;
   }
 
   &__portret {
@@ -331,7 +337,7 @@ body {
   background: $fontBackgroundSectionEven;
 
   &__content {
-    margin: -45px 0 100px 0;
+    margin: -48px 0 100px 0;
   }
 
   &__information {
@@ -347,7 +353,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    &__item {
+    &_item {
       @include formItem();
 
       &--message {

@@ -58,6 +58,30 @@
   }
 }
 
+@mixin sections_template () {
+
+  margin: -48px 0 100px 0;
+
+  &__title {
+
+    &--caption {
+
+      text-transform: uppercase;
+      text-align: center;
+      font-size: $fontTitleSize;
+      font-weight: lighter;
+    }
+
+    &--line {
+      text-align: center;
+      /* display: inline-flex;
+       align-items: center;
+       justify-content: space-between;*/
+    }
+
+  }
+}
+
 
 /*@mixin getRow {
   div[class*="__row"] {
