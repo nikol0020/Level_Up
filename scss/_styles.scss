@@ -1,8 +1,11 @@
 body {
   font: 14px/25px $primaryFont !important;
- /* font-style: $primaryFont !important;*/
   color: $defaultText;
   box-sizing: border-box;
+}
+
+[class$="__row"] {
+  @include make-row();
 }
 
 // HEADER START
@@ -12,7 +15,7 @@ body {
   background-position: 50% 35%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 750px;
+  height: 900px;
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
@@ -30,69 +33,51 @@ body {
 
   @media #{$bp-mobile } {
     font-size: 8px;
-    }
+  }
 
   &__container {
-    @include make-sm-column-offset(1);
-    @include make-sm-column(10);
-    @include make-sm-column-offset(1);
     width: 100%;
-    position: relative;
     color: $defaultFill;
     flex-grow: 1;
+    line-height: 8;
+    margin-top: 80px;
   }
 
-  &__head {
-    @include make-sm-column(12);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
-    line-height: 15;
-
-    &--logo {
-      @include make-sm-column-offset(1);
-      @include make-sm-column(2);
-      @include make-sm-column-offset(1);
-      text-align: center;
-      background: url(../images/logo.svg) no-repeat;
-      padding: 50px;
-      -webkit-text-fill-color: #fff;
-    }
-
-    &--phone {
-      @include make-sm-column(4);
-      text-align: left;
-      display: inline;
-      margin: 0;
-    }
-
-    &--note {
-      @include make-sm-column(4);
-      text-align: right;
-      display: inline;
-      margin: 0;
-    }
-
+  &__logo {
+    @include make-md-column-offset(2);
+    @include make-md-column(2);
+    //text-align: center;
+    background: url(../images/logo.svg) no-repeat;
+    padding: 50px;
+    -webkit-text-fill-color: #fff;
   }
 
-  &__nav {
-    @include make-sm-column(12);
-    width: 100%;
-    margin-bottom: 30px;
+  &__phone {
+    @include make-md-column(4);
+    @include link ();
+    text-align: left;
+    display: inline;
+  }
+
+  &__call {
+    @include make-md-column(4);
+    @include link ();
+    text-align: right;
+    display: inline;
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0 15px;
+    @include make-md-column(12);
+    margin-bottom: 30px;
   }
 
   &__item {
     @include link();
     display: block;
-    margin: 0 20px 10px 0;
+    margin: 20px 0;
     list-style-type: none;
   }
 
@@ -106,9 +91,50 @@ body {
 
 //ARTICLE
 .description {
-  @include make-sm-column(12);
+  @include make-md-column(12);
   margin: 20px 0;
   background: $fontBackgroundSectionEven;
+
+  &__title {
+    @include make-md-column(6);
+    text-transform: uppercase;
+    font-size: $fontTitleSize;
+    font-weight: lighter;
+    text-align: left;
+    margin: 5% 0;
+  }
+
+  &__text {
+    @include make-md-column(4);
+    margin: 20px 0;
+  }
+
+  &__text-bold {
+    @include make-md-column(1);
+    font-weight: 500;
+    margin: 20px 0;
+  }
+
+  &__text-color {
+    @include make-md-column(1);
+    color: $fontTitleMarkColor;
+    margin: 20px 0;
+  }
+
+  &__article {
+    @include make-sm-column(6);
+    text-align: left;
+    margin: 5% 0;
+
+    &__subtitle {
+      font-weight: bold;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 30px 0;
+  }
 
   @media #{$bp-note} {
     .description {
@@ -144,51 +170,6 @@ body {
     }
   }
 
-  &__container {
-
-    width: 100%;
-  }
-
-  &__title {
-    @include make-sm-column(5);
-    text-transform: uppercase;
-    font-size: $fontTitleSize;
-    font-weight: lighter;
-    text-align: left;
-    margin: 5% 0;
-    line-height: 0;
-    display: block;
-
-  }
-
-  .description__title.description__row {
-    width: auto;
-    margin: 30px 0;
-  }
-
-  &__text-bold {
-    font-weight: 500;
-  }
-
-  &__text-color {
-    color: $fontTitleMarkColor;
-  }
-
-  &__article {
-    @include make-sm-column(6);
-    text-align: left;
-    margin: 5% 0;
-
-    &__article-title {
-      font-weight: bold;
-    }
-  }
-
-  &__list {
-    padding: 0;
-    margin: 30px 0;
-  }
-
 }
 
 //ARTICLE END
@@ -200,13 +181,12 @@ body {
   background: $fontBackgroundSectionOdd;
 
   &__content {
-
     @include title_section ();
     margin: -48px 0 100px 0;
 
   }
 
-  &_image {
+  &__image {
     width: 100%;
   }
 
@@ -220,7 +200,7 @@ body {
   &__note {
     position: absolute;
     bottom: -25px;
-    left: 30px;
+    left: 15px;
 
     &--color {
       color: $fontBackgroundButton;
@@ -282,26 +262,23 @@ body {
     width: $width;
   }
 
+  &__subtitle {
+    font-weight: bold;
+  }
+
   &__article {
     @include make-sm-column(6);
     text-align: left;
     float: right;
     margin: 5% 0;
-
-    &_title {
-      font-weight: bold;
-
-      &--row {
-        text-align: left;
-      }
-    }
-
-    &_content {
-      font-size: $fontDescriptionSize;
-    }
   }
 
-  &_image {
+  &__text {
+    margin-top: 30px;
+    font-size: $fontDescriptionSize;
+  }
+
+  &__image {
     width: 100%;
   }
 
@@ -317,11 +294,10 @@ body {
     margin: 6% 0;
     display: flex;
     flex-direction: column;
+  }
 
-    &_item {
-      @include formItem();
-    }
-
+  &__item {
+    @include formItem();
   }
 }
 
@@ -341,8 +317,21 @@ body {
     margin: 50px 0;
   }
 
-  &_image {
+  &__image {
     width: 100%;
+  }
+
+  &__note {
+    text-align: center;
+    font-size: $fontDescriptionSize;
+  }
+
+  &__company {
+    font-style: italic;
+  }
+
+  &__description {
+    text-align: center;
   }
 
   &__items {
@@ -354,20 +343,13 @@ body {
 
     &:before {
       position: absolute;
-      top: 25%;
-      left: -5%;
+      top: 20%;
+      left: -10%;
       content: '';
       background: url(../images/quotes.png) no-repeat;
-      width: 40px;
-      height: 40px;
-    }
-
-    &__note {
-      text-align: center;
-    }
-
-    &__description {
-      text-align: center;
+      background-size: cover;
+      width: 63px;
+      height: 51px;
     }
 
   }
@@ -426,6 +408,28 @@ body {
     @include make-sm-column(6);
     margin: 6% 0;
     font-size: $fontDescriptionSize;
+    font-weight: 500;
+  }
+
+  &__email {
+    margin-bottom: 20px;
+  }
+
+  &__phone {
+    margin-bottom: 20px;
+  }
+
+  &__address {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    @include formItem();
+
+    &--message {
+      height: 200px;
+    }
+
   }
 
   &__form {
@@ -434,24 +438,6 @@ body {
     margin: 6% 0;
     display: flex;
     flex-direction: column;
-
-    &_item {
-      @include formItem();
-
-      &--message {
-        height: 200px;
-      }
-
-      &--text {
-        position: relative;
-        bottom: 185px;
-        height: 0.5px;
-        margin: 0 auto;
-        font-weight: 500;
-      }
-
-    }
-
   }
 }
 
@@ -464,7 +450,7 @@ body {
   background-position: 50% 35%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
+  height: 900px;
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
