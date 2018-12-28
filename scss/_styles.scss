@@ -23,6 +23,19 @@ body {
   color: $logoColor;
   width: 100%;
 
+  &__nav {
+    display: block;
+
+    @media #{$bp-tablet} {
+      display: none;
+    }
+
+    @media #{$bp-mobile} {
+      display: none;
+    }
+
+  }
+
   @media #{$bp-note} {
     font-size: 12px;
   }
@@ -41,36 +54,50 @@ body {
     flex-grow: 1;
     line-height: 8;
     margin-top: 80px;
-  }
-
-  &__logo {
-    @include make-md-column-offset(2);
-    @include make-md-column(2);
-    //text-align: center;
-    background: url(../images/logo.svg) no-repeat;
-    padding: 50px;
-    -webkit-text-fill-color: #fff;
+    text-align: center;
   }
 
   &__phone {
-    @include make-md-column(4);
+    @include make-sm-column(4);
     @include link ();
     text-align: left;
-    display: inline;
+    float: left;
+  }
+
+  &__logo {
+    @include make-sm-column-offset(2);
+    @include make-sm-column(2);
+    background: url(../images/logo.svg) no-repeat;
+    -webkit-text-fill-color: #fff;
+    padding: 50px;
+    top: 10px;
+
+    @media #{$bp-note} {
+      padding: 30px;
+    }
+
+    @media #{$bp-tablet} {
+      padding: 30px;
+    }
+
+    @media #{$bp-mobile} {
+      padding: 30px;
+    }
+
   }
 
   &__call {
-    @include make-md-column(4);
+    @include make-sm-column(4);
     @include link ();
     text-align: right;
-    display: inline;
+    float: right;
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    @include make-md-column(12);
+    @include make-sm-column(12);
     margin-bottom: 30px;
   }
 
@@ -87,36 +114,76 @@ body {
 
 }
 
+.gamburger {
+  display: none;
+
+  &__sign {
+    @include make-sm-column(2);
+    display: block;
+  }
+
+  &__string {
+    background-color: $colorLink;
+    padding: 0 15px;
+    font-size: 2px;
+    position: relative;
+
+    &:first-child {
+      top: 20px;
+    }
+
+    &:last-child {
+      bottom: 20px;
+    }
+  }
+
+  @media #{$bp-tablet} {
+    display: block;
+  }
+
+  @media #{$bp-mobile} {
+    display: block;
+    position: absolute;
+  }
+
+}
+
 // HEADER END
 
 //ARTICLE
 .description {
-  @include make-md-column(12);
+  @include make-sm-column(12);
   margin: 20px 0;
   background: $fontBackgroundSectionEven;
 
   &__title {
-    @include make-md-column(6);
+    @include make-sm-column(6);
     text-transform: uppercase;
     font-size: $fontTitleSize;
     font-weight: lighter;
     text-align: left;
     margin: 5% 0;
+    line-height: 1;
+
+    @media #{$bp-desktop} {
+      line-height: 0;
+    }
+
   }
 
   &__text {
-    @include make-md-column(4);
+    @include make-sm-column(4);
     margin: 20px 0;
   }
 
   &__text-bold {
-    @include make-md-column(1);
+    @include make-sm-column(1);
     font-weight: 500;
     margin: 20px 0;
   }
 
   &__text-color {
-    @include make-md-column(1);
+    @include make-sm-column(1);
     color: $fontTitleMarkColor;
     margin: 20px 0;
   }
@@ -357,7 +424,7 @@ body {
   @media #{$bp-note} {
 
     .testimonials__items {
-      width: 50%;
+      width: 45%;
       margin-left: 25%;
       &:before {
         top: 35%;
@@ -381,11 +448,11 @@ body {
   @media #{$bp-mobile} {
 
     .testimonials__items {
-      width: 40%;
+      width: 55%;
       margin-left: 25%;
       &:before {
-        top: 20%;
-        left: -5%;
+        top: 15%;
+        left: -12%;
       }
     }
   }
@@ -451,40 +518,34 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 900px;
-  text-transform: uppercase;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  color: $logoColor;
 
   &__container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
-
-  &__content {
-    @include make-sm-column(12);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     color: $defaultFill;
     flex-grow: 1;
+    line-height: 8;
+    margin-top: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    font-size: $fontSmallSize;
+  }
 
-    &--logo {
-      @include make-sm-column(2);
-      background: url(../images/logo.svg) no-repeat;
-      padding: 50px;
-      -webkit-text-fill-color: #fff;
-    }
+  &__logo {
+    @include make-sm-column(2);
+    background: url(../images/logo.svg) no-repeat;
+    -webkit-text-fill-color: #fff;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin: 300px auto;
   }
 
   &__copyright {
-    @include make-sm-column(12);
+    @include make-sm-column(4);
     text-align: center;
-    margin-bottom: 80px;
-    margin-left: -15px;
+    margin: 0 auto;
     font-size: $fontSmallSize;
   }
 
