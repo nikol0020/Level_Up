@@ -45,6 +45,10 @@
       text-align: center;
       font-size: $fontTitleSize;
       font-weight: lighter;
+
+      @media #{$bp-mobile} {
+        margin: -25px 0 0;
+      }
     }
 
     &--line {
@@ -54,14 +58,13 @@
   }
 }
 
-
-/*@mixin getRow {
+@mixin getRow {
   div[class*="__row"] {
     @include make-row;
   }
-};
+}
 
-@mixin pseudo($display: block, $pos: absolute, $content: '') {
+/*@mixin pseudo($display: block, $pos: absolute, $content: '') {
   content: $content;
   display: $display;
   position: $pos;

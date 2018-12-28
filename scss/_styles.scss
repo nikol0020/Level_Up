@@ -1,11 +1,8 @@
 body {
-  font: 14px/25px $primaryFont !important;
+  font: 16px/25px $primaryFont !important;
   color: $defaultText;
   box-sizing: border-box;
-}
-
-[class$="__row"] {
-  @include make-row();
+  @include getRow();
 }
 
 // HEADER START
@@ -37,15 +34,15 @@ body {
   }
 
   @media #{$bp-note} {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   @media #{$bp-tablet} {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   @media #{$bp-mobile} {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   &__container {
@@ -65,8 +62,9 @@ body {
   }
 
   &__logo {
-    @include make-sm-column-offset(2);
+    @include make-sm-column-offset(1);
     @include make-sm-column(2);
+    @include make-sm-column-offset(1);
     background: url(../images/logo.svg) no-repeat;
     -webkit-text-fill-color: #fff;
     padding: 50px;
@@ -116,6 +114,11 @@ body {
 
 .gamburger {
   display: none;
+  float: left;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &__sign {
     @include make-sm-column(2);
@@ -143,7 +146,6 @@ body {
 
   @media #{$bp-mobile} {
     display: block;
-    position: absolute;
   }
 
 }
@@ -156,6 +158,10 @@ body {
   margin: 20px 0;
   background: $fontBackgroundSectionEven;
 
+  @media #{$bp-mobile} {
+    margin: 50px 0;
+  }
+
   &__title {
     @include make-sm-column(6);
     text-transform: uppercase;
@@ -163,10 +169,14 @@ body {
     font-weight: lighter;
     text-align: left;
     margin: 5% 0;
-    line-height: 1;
+    line-height: 0.5;
 
-    @media #{$bp-desktop} {
-      line-height: 0;
+    @media #{$bp-tablet} {
+      line-height: 1;
+    }
+
+    @media #{$bp-mobile} {
+      line-height: 1;
     }
 
   }
@@ -247,6 +257,10 @@ body {
   @include title_section ();
   background: $fontBackgroundSectionOdd;
 
+  @media #{$bp-mobile} {
+    margin: 50px 0;
+  }
+
   &__content {
     @include title_section ();
     margin: -48px 0 100px 0;
@@ -300,7 +314,7 @@ body {
     @include link();
     @include make-sm-column(12);
     text-align: center;
-    margin-top: 20px;
+    margin: 20px 0 60px 0;;
 
     &--name {
       padding: 13px 50px;
@@ -312,7 +326,6 @@ body {
 
   }
 }
-
 //GALLERY END
 
 //CONSULTATION START
@@ -320,6 +333,15 @@ body {
   @include make-sm-column(12);
   @include title_section ();
   background: $fontBackgroundSectionEven;
+
+  @media #{$bp-mobile} {
+  margin: 50px 0;
+  &__title {
+    &--caption {
+      margin: -80px 0 0;
+    }
+  }
+}
 
   &__content {
     margin: -48px 0 100px 0;
@@ -367,7 +389,6 @@ body {
     @include formItem();
   }
 }
-
 //CONSULTATION END
 
 //TESTIMONIALS START
@@ -375,6 +396,10 @@ body {
   @include make-sm-column(12);
   @include title_section ();
   background: $fontBackgroundSectionOdd;
+
+  @media #{$bp-mobile} {
+    margin: 50px 0;
+  }
 
   &__content {
     margin: -48px 0 100px 0;
@@ -439,8 +464,8 @@ body {
       width: 50%;
       margin-left: 25%;
       &:before {
-        top: 30%;
-        left: -4%;
+        top: 25%;
+        left: -10%;
       }
     }
   }
@@ -451,14 +476,13 @@ body {
       width: 55%;
       margin-left: 25%;
       &:before {
-        top: 15%;
-        left: -12%;
+        top: 20%;
+        left: -8%;
       }
     }
   }
 
 }
-
 //TESTIMONIALS END
 
 //CONTACT START
@@ -466,6 +490,15 @@ body {
   @include make-sm-column(12);
   @include title_section ();
   background: $fontBackgroundSectionEven;
+
+  @media #{$bp-mobile} {
+    margin: 50px 0;
+    &__title {
+      &--caption {
+        margin: -80px 0 0;
+      }
+    }
+  }
 
   &__content {
     margin: -48px 0 100px 0;
@@ -507,7 +540,6 @@ body {
     flex-direction: column;
   }
 }
-
 //CONTACT END
 
 //FOOTER START
