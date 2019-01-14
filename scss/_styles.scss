@@ -88,7 +88,7 @@ body {
     @include make-sm-column(4);
     @include link ();
     text-align: right;
-    float: right;
+    float: right !important;
   }
 
   &__list {
@@ -259,6 +259,7 @@ body {
 
   @media #{$bp-mobile} {
     margin: 50px 0;
+    font-size: 12px;
   }
 
   &__content {
