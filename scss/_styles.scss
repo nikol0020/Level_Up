@@ -69,6 +69,7 @@ body {
     background: $logoPicture;
     -webkit-text-fill-color: $logoColor;
     fill: $logoColor;
+    color: $logoColor;
     padding: 50px;
     top: 10px;
 
@@ -329,6 +330,7 @@ body {
 
   }
 }
+
 //GALLERY END
 
 //CONSULTATION START
@@ -338,13 +340,13 @@ body {
   background: $fontBackgroundSectionEven;
 
   @media #{$bp-mobile} {
-  margin: 50px 0;
-  &__title {
-    &--caption {
-      margin: -80px 0 0;
+    margin: 50px 0;
+    &__title {
+      &--caption {
+        margin: -80px 0 0;
+      }
     }
   }
-}
 
   &__content {
     margin: -48px 0 100px 0;
@@ -392,6 +394,7 @@ body {
     @include formItem();
   }
 }
+
 //CONSULTATION END
 
 //TESTIMONIALS START
@@ -486,6 +489,7 @@ body {
   }
 
 }
+
 //TESTIMONIALS END
 
 //CONTACT START
@@ -543,6 +547,7 @@ body {
     flex-direction: column;
   }
 }
+
 //CONTACT END
 
 //FOOTER START
@@ -569,8 +574,10 @@ body {
 
   &__logo {
     @include make-sm-column(2);
-    background: url(../images/logoNight.svg) no-repeat;
+    background: $logoPicture;
+    -webkit-text-fill-color: $logoColor;
     fill: $logoColor;
+    color: $logoColor;
     text-align: center;
     width: 100px;
     height: 100px;
