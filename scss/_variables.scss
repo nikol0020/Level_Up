@@ -1,5 +1,6 @@
 //Global
-$headerBackground: url(../images/header_background.jpg);
+$headerBackgroundEvening: url(../images/header_background.jpg);
+$headerBackgroundMorning: url(../images/main_fon_morning.jpg);
 $footerBackground: url(../images/footer_img.jpg);
 $width: 1260px;
 
@@ -23,8 +24,13 @@ $tango: #f17519;
 $redOrange: #ff3c1f;
 $alto: #dfdfdf;
 $thunder: #262526;
-//$blue: #0ea2f1;
+$ultramarine: #0B0D93;
+$blue: #0ea2f1;
 $dodgerBlue: #0ea2f1;
+$purple: #6810BC;
+$perfume: #DDBAF7;
+$frenchPass: #A7FBF8;
+$moonGlow: #FEFBD7;
 $silverSand: #c7c9cc;
 $grayChateau: #a2a4a7;
 $grayWithOpacity: rgba(128, 128, 128, .5);
@@ -48,8 +54,8 @@ $fontSmallSize: 18px;
         lg: 1200px
 );*/
 //$bp-mobile-minus    : "screen and (max-width: 380px)";
-$bp-mobile: "screen and (max-width: 679px)";
-$bp-tablet: "screen and (min-width: 680px) and (max-width: 959px)"; //10f-s
+$bp-mobile: "screen and (max-width: 768px)";
+$bp-tablet: "screen and (min-width: 769px) and (max-width: 959px)"; //10f-s
 $bp-note: "screen and (min-width: 960px) and (max-width: 1240px)"; //12font-size
 $bp-desktop: "screen and (min-width: 1241px)";
 //$bp-widescreen      : "screen and (min-width: 1680px)";

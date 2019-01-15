@@ -37,7 +37,7 @@
 }
 
 @mixin title_section() {
-
+  color: $defaultText;
   &__title {
 
     &--caption {

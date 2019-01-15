@@ -1,14 +1,15 @@
 body {
-  font: 16px/25px $primaryFont !important;
-  color: $defaultText;
+  font: 16px/25px $defaultFont !important;
+  color: $defaultText !important;
   box-sizing: border-box;
+  background-color: $defaultBackground !important;
   @include getRow();
 }
 
 // HEADER START
 .header {
   @include make-sm-column(12);
-  background: $headerBackground;
+  background: $defaultHeaderBackground;
   background-position: 50% 35%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -66,7 +67,8 @@ body {
     @include make-sm-column(2);
     @include make-sm-column-offset(1);
     background: url(../images/logo.svg) no-repeat;
-    -webkit-text-fill-color: #fff;
+    -webkit-text-fill-color: $logoColor;
+    fill: $logoColor;
     padding: 50px;
     top: 10px;
 
@@ -114,7 +116,6 @@ body {
 
 .gamburger {
   display: none;
-  float: left;
 
   &:hover {
     cursor: pointer;
@@ -146,6 +147,7 @@ body {
 
   @media #{$bp-mobile} {
     display: block;
+    margin-left: 0 !important;
   }
 
 }
@@ -155,7 +157,7 @@ body {
 //ARTICLE
 .description {
   @include make-sm-column(12);
-  margin: 20px 0;
+  color: $defaultText;
   background: $fontBackgroundSectionEven;
 
   @media #{$bp-mobile} {
@@ -568,7 +570,7 @@ body {
   &__logo {
     @include make-sm-column(2);
     background: url(../images/logo.svg) no-repeat;
-    -webkit-text-fill-color: #fff;
+    fill: $logoColor;
     text-align: center;
     width: 100px;
     height: 100px;
