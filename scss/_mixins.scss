@@ -33,6 +33,12 @@
     &[type="text"]::-webkit-input-placeholder {
       color: $colorActive;
     }
+    &[type="submit"] {
+      color: $colorActive;
+    }
+    &[type="submit"]:hover {
+      color: $colorHover;
+    }
   }
 }
 
@@ -52,7 +58,12 @@
     }
 
     &--line {
+      color: $fontTitleMarkColor;
+      font-weight: 500;
       text-align: center;
+      vertical-align: text-bottom;
+      position: relative;
+      top: -10px;
     }
 
   }

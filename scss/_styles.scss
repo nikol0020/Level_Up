@@ -115,7 +115,7 @@ body {
 
 }
 
-.gamburger {
+.menu-icon {
   display: none;
 
   &:hover {
@@ -160,6 +160,7 @@ body {
   @include make-sm-column(12);
   color: $defaultText;
   background: $fontBackgroundSectionEven;
+  margin: 100px 0;
 
   @media #{$bp-mobile} {
     margin: 50px 0;
@@ -173,6 +174,8 @@ body {
     text-align: left;
     margin: 5% 0;
     line-height: 0.5;
+    display: flex;
+    flex-direction: column;
 
     @media #{$bp-tablet} {
       line-height: 1;
@@ -187,18 +190,21 @@ body {
   &__text {
     @include make-sm-column(4);
     margin: 20px 0;
+    display: inline-flex;
   }
 
   &__text-bold {
     @include make-sm-column(1);
     font-weight: 500;
     margin: 20px 0;
+    top: -20px;
   }
 
   &__text-color {
     @include make-sm-column(1);
     color: $fontTitleMarkColor;
     margin: 20px 0;
+    top: -20px;
   }
 
   &__article {
@@ -207,7 +213,7 @@ body {
     margin: 5% 0;
 
     &__subtitle {
-      font-weight: bold;
+      font-weight: 500;
     }
   }
 
@@ -260,15 +266,8 @@ body {
   @include title_section ();
   background: $fontBackgroundSectionOdd;
 
-  @media #{$bp-mobile} {
-    margin: 50px 0;
-    font-size: 12px;
-  }
-
   &__content {
-    @include title_section ();
     margin: -48px 0 100px 0;
-
   }
 
   &__image {
@@ -301,7 +300,6 @@ body {
 
     &--long {
       @include make-sm-column(8);
-
     }
 
     &--medium {
@@ -357,7 +355,7 @@ body {
   }
 
   &__subtitle {
-    font-weight: bold;
+    font-weight: 500;
   }
 
   &__article {
@@ -443,11 +441,14 @@ body {
       position: absolute;
       top: 20%;
       left: -10%;
+     //  left: -5%;
+     // content: '\201e';
       content: '';
       background: url(../images/quotes.png) no-repeat;
       background-size: cover;
-      width: 63px;
-      height: 51px;
+      width: 60px;
+      height: 50px;
+     // font-size: 110px;
     }
 
   }
@@ -550,6 +551,170 @@ body {
 
 //CONTACT END
 
+//BUTTONS START
+.buttons {
+  @include make-sm-column(12);
+  @include title_section();
+  background: $fontBackgroundSectionOdd;
+
+  &__content {
+    margin: -48px 0 100px 0;
+  }
+
+  &__row--stretch {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+  }
+
+  &__play {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    background-color: $darkBlue;
+    border: 1px solid $darkBlue;
+    border-radius: 5px;
+    color: $white;
+    text-align: center;
+  }
+
+  &__pause {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    background-color: $blueRomance;
+    border: 1px solid $blueRomance;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  &__oN {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    background-color: $darkBlue;
+    border: 1px solid $darkBlue;
+    border-radius: 30px;
+    color: $white;
+    text-align: center;
+  }
+
+  &__oFF {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    background-color: $blueRomance;
+    border: 1px solid $blueRomance;
+    border-radius: 30px;
+    text-align: center;
+  }
+
+
+
+  &__on {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    color: $white;
+    position: relative;
+
+    &--darkBlue {
+      background-color: $purple;
+      border: 1px solid $purple;
+    }
+
+    &--green {
+      background-color: $apple;
+      border: 1px solid $apple;
+    }
+
+    &--blue {
+      background-color: $dodgerBlue;
+      border: 1px solid $dodgerBlue;
+    }
+
+    &--orange {
+      background-color: $ripeLemon;
+      border: 1px solid $ripeLemon;
+    }
+
+    &--red {
+      background-color: $crimson;
+      border: 1px solid $crimson;
+    }
+
+  }
+
+/*  &__on:before {
+    content: "KJHKJHKLKJ";
+   width: 10px;
+   height: 40px;
+    background-color: $white;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+  }*/
+
+  &__offMid {
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: $blueRomance;
+    border: 1px solid $blueRomance;
+  }
+
+  &__offLarge {
+    width: 150px;
+    height: 60px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: $blueRomance;
+    border: 1px solid $blueRomance;
+  }
+
+  &__onMid {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    color: $white;
+    background-color: $purple;
+    border: 1px solid $purple;
+  }
+
+  &__offSmall {
+    width: 80px;
+    height: 35px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: $blueRomance;
+    border: 1px solid $blueRomance;
+  }
+
+  &__onSmall {
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+    text-align: center;
+    color: $white;
+    background-color: $purple;
+    border: 1px solid $purple;
+  }
+
+
+  /*  &__play:after {
+  content: "Play";
+      height: 10px;
+      width: 15px;
+      position: absolute;
+      left: 2px;
+    }*/
+}
+
+//BUTTONS END
+
 //FOOTER START
 .footer {
   @include make-sm-column(12);
@@ -589,6 +754,7 @@ body {
     text-align: center;
     margin: 0 auto;
     font-size: $fontSmallSize;
+    height: 20px;
   }
 
 }
