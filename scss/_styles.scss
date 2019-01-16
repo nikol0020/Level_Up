@@ -115,7 +115,7 @@ body {
 
 }
 
-.gamburger {
+.menu-icon {
   display: none;
 
   &:hover {
@@ -160,6 +160,7 @@ body {
   @include make-sm-column(12);
   color: $defaultText;
   background: $fontBackgroundSectionEven;
+  margin: 100px 0;
 
   @media #{$bp-mobile} {
     margin: 50px 0;
@@ -173,6 +174,8 @@ body {
     text-align: left;
     margin: 5% 0;
     line-height: 0.5;
+    display: flex;
+    flex-direction: column;
 
     @media #{$bp-tablet} {
       line-height: 1;
@@ -187,18 +190,21 @@ body {
   &__text {
     @include make-sm-column(4);
     margin: 20px 0;
+    display: inline-flex;
   }
 
   &__text-bold {
     @include make-sm-column(1);
     font-weight: 500;
     margin: 20px 0;
+    top: -20px;
   }
 
   &__text-color {
     @include make-sm-column(1);
     color: $fontTitleMarkColor;
     margin: 20px 0;
+    top: -20px;
   }
 
   &__article {
@@ -207,7 +213,7 @@ body {
     margin: 5% 0;
 
     &__subtitle {
-      font-weight: bold;
+      font-weight: 500;
     }
   }
 
@@ -260,15 +266,8 @@ body {
   @include title_section ();
   background: $fontBackgroundSectionOdd;
 
-  @media #{$bp-mobile} {
-    margin: 50px 0;
-    font-size: 12px;
-  }
-
   &__content {
-    @include title_section ();
     margin: -48px 0 100px 0;
-
   }
 
   &__image {
@@ -301,7 +300,6 @@ body {
 
     &--long {
       @include make-sm-column(8);
-
     }
 
     &--medium {
@@ -357,7 +355,7 @@ body {
   }
 
   &__subtitle {
-    font-weight: bold;
+    font-weight: 500;
   }
 
   &__article {
@@ -446,8 +444,8 @@ body {
       content: '';
       background: url(../images/quotes.png) no-repeat;
       background-size: cover;
-      width: 63px;
-      height: 51px;
+      width: 60px;
+      height: 50px;
     }
 
   }
@@ -589,6 +587,7 @@ body {
     text-align: center;
     margin: 0 auto;
     font-size: $fontSmallSize;
+    height: 20px;
   }
 
 }

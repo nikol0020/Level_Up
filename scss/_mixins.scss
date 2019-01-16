@@ -33,6 +33,12 @@
     &[type="text"]::-webkit-input-placeholder {
       color: $colorActive;
     }
+    &[type="submit"] {
+      color: $colorActive;
+    }
+    &[type="submit"]:hover {
+      color: $colorHover;
+    }
   }
 }
 
@@ -45,14 +51,15 @@
       text-align: center;
       font-size: $fontTitleSize;
       font-weight: lighter;
-
-      @media #{$bp-mobile} {
-        margin: -25px 0 0;
-      }
     }
 
     &--line {
+      color: $fontTitleMarkColor;
+      font-weight: 500;
       text-align: center;
+      vertical-align: text-bottom;
+      position: relative;
+      top: -10px;
     }
 
   }
@@ -64,10 +71,5 @@
   }
 }
 
-/*@mixin pseudo($display: block, $pos: absolute, $content: '') {
-  content: $content;
-  display: $display;
-  position: $pos;
-};*/
 
 
