@@ -484,10 +484,11 @@ body {
       top: 20%;
       left: -10%;
       content: '';
-      background: url(../images/quotes.png) no-repeat;
+      background: url(../images/quotes.svg) no-repeat;
       background-size: cover;
-      width: 60px;
+      width: 65px;
       height: 50px;
+      transform: rotate(180deg);
     }
 
   }
@@ -510,7 +511,19 @@ body {
       width: 50%;
       margin-left: 25%;
       &:before {
-        top: 25%;
+        top: 30%;
+        left: -5%;
+      }
+    }
+  }
+
+  @media #{$bp-mobile} {
+
+    .testimonials__items {
+      width: 50%;
+      margin-left: 25%;
+      &:before {
+        top: 20%;
         left: -10%;
       }
     }
