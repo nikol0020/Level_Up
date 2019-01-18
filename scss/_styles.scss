@@ -316,7 +316,7 @@ body {
   background: $fontBackgroundSectionOdd;
 
   &__container {
-    margin: -48px 0 100px 0;
+    margin: -15px 0 100px 0;
   }
 
   &__image {
@@ -396,7 +396,7 @@ body {
   }
 
   &__container {
-    margin: -48px 0 100px 0;
+    margin: -15px 0 100px 0;
   }
 
   &__subtitle {
@@ -447,7 +447,7 @@ body {
 
   &__container {
     @include make-sm-column(12);
-    margin: -48px 0 100px 0;
+    margin: -15px 0 100px 0;
   }
 
   &__portret {
@@ -469,6 +469,7 @@ body {
 
   &__description {
     text-align: center;
+    font-weight: 500;
   }
 
   &__items {
@@ -534,7 +535,7 @@ body {
   }
 
   &__container {
-    margin: -48px 0 100px 0;
+    margin: -15px 0 100px 0;
   }
 
   &__information {

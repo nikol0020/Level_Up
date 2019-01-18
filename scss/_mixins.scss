@@ -53,16 +53,39 @@
       text-transform: uppercase;
       text-align: center;
       font-size: $fontTitleSize;
-      font-weight: lighter;
+      font-weight: 100;
+      width: min-content;
+      margin: 0 auto;
     }
 
     &--line {
       color: $fontTitleMarkColor;
-      font-weight: 500;
+      font-weight: 200;
       text-align: center;
       vertical-align: text-bottom;
       position: relative;
-      top: -10px;
+      top: 15px;
+      background: url("../images/crown.png") no-repeat center center;
+      padding: 5px 0 10px 0;
+    }
+
+    &--line:before,
+    &--line:after {
+      content: "";
+      width: calc(45% - 5px);
+      position: relative;
+      display: block;
+      height: 2px;
+      background: #0ea2f1;
+      text-align: center;
+    }
+
+    &--line:before {
+      float: left;
+    }
+
+    &--line:after {
+      float: right;
     }
 
   }
