@@ -8,27 +8,44 @@
     <title>Level Miami</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;subset=latin-ext"
-          rel="stylesheet">
+  <!--  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;subset=latin-ext"
+          rel="stylesheet">-->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
-
 
 <body>
 
 <!-- HEADER START -->
 <header class="container header">
     <div class="menu-icon__row">
-        <div class="menu-icon">
-            <!-- <div class="menu-icon__row">-->
-            <div class="menu-icon__sign">
-                <span class="menu-icon__string"></span><br/>
-                <span class="menu-icon__string"></span><br/>
-                <span class="menu-icon__string"></span>
-            </div>
-        </div>
+
+            <span class="menu-icon closed" id="menuBtn"></span>
+
+            <nav class="menu-icon__container closed" id="menuContainer">
+                <ul class="menu-icon__list">
+                    <li class="menu-icon__item">
+                        <a class="menu-icon__link" href="#">Home</a>
+                    </li>
+                    <li class="menu-icon__item">
+                        <a class="menu-icon__link" href="#">About us</a>
+                    </li>
+                    <li class="menu-icon__item">
+                        <a class="menu-icon__link" href="#">Gallery</a>
+                    </li>
+                    <li class="menu-icon__item">
+                        <a class="menu-icon__link" href="#">Consultation</a>
+                    </li>
+                    <li class="menu-icon__item">
+                        <a class="menu-icon__link" href="#">Testimonials</a>
+                    </li>
+                    <li class="menu-icon__item">
+                        <a class="menu-icon__link" href="#">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+
     </div>
     <div class="header__container">
         <div class="header__row">
@@ -325,6 +342,7 @@
                 <button type="submit" class="contact__item contact__item--active" value="">WRITE TO US</button>
             </form>
         </div>
+    </div>
 </section>
 <!-- CONTACT END -->
 
@@ -338,6 +356,6 @@
     </div>
 </footer>
 <!-- FOOTER END -->
-
+<script src="js/menu_mobile.js"></script>
 </body>
 </html>

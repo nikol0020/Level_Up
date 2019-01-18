@@ -17,7 +17,7 @@ body {
   font-weight: bold;
   display: flex;
   flex-direction: column;
-  color: $logoColor;
+  color: $headerItemColor;
   width: 100%;
 
   &__nav {
@@ -107,29 +107,57 @@ body {
 
 .menu-icon {
   display: none;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+  margin: 15px;
 
-  &:hover {
-    cursor: pointer;
-  }
-
-  &__sign {
-    @include make-sm-column(2);
+  &__item {
+    @include link();
     display: block;
+    margin: 20px 0;
   }
 
-  &__string {
-    background-color: $colorLink;
-    padding: 0 15px;
-    font-size: 2px;
-    position: relative;
+  &__link {
+    color: $colorLink;
+  }
 
-    &:first-child {
-      top: 20px;
-    }
+  &, &:before,
+  &:after {
+    border-top: 2px solid $headerItemColor;
+    transition: all .3s;
+  }
 
-    &:last-child {
-      bottom: 20px;
-    }
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0;
+    right: 0;
+  }
+
+  &:before {
+    top: 7px;
+  }
+
+  &:after {
+    top: 17px;
+  }
+
+  &.opened {
+    border-top-color: transparent;
+  }
+
+  &.opened:after {
+    transform: rotate(45deg);
+    top: 12px;
+  }
+
+  &.opened:before {
+    transform: rotate(-45deg);
+    top: 12px;
   }
 
   @media #{$bp-tablet} {
@@ -138,10 +166,43 @@ body {
 
   @media #{$bp-mobile} {
     display: block;
-    margin-left: 0 !important;
   }
 
 }
+
+.menu-icon__container {
+  padding-top: 20px;
+  width: 250px;
+
+  .menu-icon__list {
+    list-style: none;
+    padding: 0;
+    margin: 15px;
+  }
+
+  .menu-icon__item {
+    margin-bottom: 10px;
+  }
+
+  .menu-icon__link {
+    display: block;
+    padding: 10px 0;
+    color: $defaultButtonColor;
+    background: $fontBackgroundButton;
+    text-decoration: none;
+    text-align: center;
+    font-family: $defaultFont;
+  }
+
+  &.closed {
+    display: none;
+  }
+
+  &.opened {
+    display: block;
+  }
+}
+
 // HEADER END
 
 //ARTICLE
@@ -182,7 +243,7 @@ body {
   }
 
   &__text-bold {
-    font-weight: 500;
+    font-weight: 900;
     margin: 20px 0;
     top: -20px;
   }
@@ -480,7 +541,7 @@ body {
     @include make-sm-column(6);
     margin: 6% 0;
     font-size: $fontDescriptionSize;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   &__email {
@@ -540,18 +601,17 @@ body {
 
   &__logo {
     @include make-sm-column(12);
-    background: $logoPicture center center;
+    background: $logoPicture;
     -webkit-text-fill-color: $logoColor;
     fill: $logoColor;
     color: $logoColor;
-    text-align: center;
     width: 100px;
     height: 100px;
     margin: 300px auto;
   }
 
   &__copyright {
-    @include make-sm-column(4);
+    //@include make-sm-column(4);
     text-align: center;
     margin: 0 auto;
     font-size: $fontSmallSize;
@@ -559,6 +619,4 @@ body {
   }
 
 }
-
 //FOOTER END
-
