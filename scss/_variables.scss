@@ -2,8 +2,8 @@
 $headerBackgroundEvening: url(../images/header_background.jpg);
 $headerBackgroundMorning: url(../images/main_fon_morning.jpg);
 $footerBackground: url(../images/footer_img.jpg);
-$logoNight: url(../images/logoNight.svg) no-repeat;
-$logoMorning: url(../images/logoMorning.svg) no-repeat;
+$logoNight: url(../images/logoNight.svg) no-repeat center center;
+$logoMorning: url(../images/logoMorning.svg) no-repeat center center;
 $width: 1260px;
 
 // Colors
@@ -34,29 +34,26 @@ $dodgerBlue: #0ea2f1;
 $purple: #6810BC;
 $perfume: #DDBAF7;
 $frenchPass: #A7FBF8;
+$TitanWhite: #E2E1FF;
 $moonGlow: #FEFBD7;
+$RiceFlower: #EEFFE1;
 $silverSand: #c7c9cc;
 $grayChateau: #a2a4a7;
 $grayWithOpacity: rgba(128, 128, 128, .5);
 $nevada: #6d6f72;
 
 //Typography
-$primaryFont:  "Ubuntu";
-$secondaryFont: "Open Sans";
+$primaryFont:  "Ubuntu Evening";
+$secondaryFont: "Ubuntu Morning";
 //$iconFont: "themify";
 $title: "Miami best  Realry—  this";
 
 //Font size
 $fontBigSize: 48px;
+$fontMidSize: 36px;
 $fontSmallSize: 18px;
+$fontXSmallSize: 14px;
 
-// Breakpoints.
-/*$breakpoints: (
-        xs: 576px,
-        sm: 768px,
-        md: 992px,
-        lg: 1200px
-);*/
 //$bp-mobile-minus    : "screen and (max-width: 380px)";
 $bp-mobile: "screen and (max-width: 768px)";
 $bp-tablet: "screen and (min-width: 769px) and (max-width: 979px)"; //10f-s

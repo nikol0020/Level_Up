@@ -1,19 +1,17 @@
 //@import url(http://fonts.googleapis.com/css?family=Ubuntu);
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,500,600);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i);
+//@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,500,600);
+//@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i);
 
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu Evening';
   font-style: normal;
-  font-weight: 400;
-  src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(https://fonts.gstatic.com/s/ubuntu/v12/4iCs6KVjbNBYlgoKcg72j00.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  src: url(../fonts/ubuntu/Ubuntu-R.ttf);
 }
 
 @font-face {
-  font-family: "themify";
-  src: url(../fonts/themify/themify.ttf),
-  url(../fonts/themify/themify.woff),
-  url(../fonts/themify/themify.eot);
+  font-family: 'Ubuntu Morning';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/ubuntu/Ubuntu-L.ttf);
 }
 

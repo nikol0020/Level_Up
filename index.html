@@ -8,39 +8,55 @@
     <title>Level Miami</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;subset=latin-ext"
-          rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
-
 <body>
 
 <!-- HEADER START -->
-<header class="header">
-    <div class="container menu-icon">
-        <div class="menu-icon__row">
-            <div class="menu-icon__sign">
-                <span class="menu-icon__string"></span><br/>
-                <span class="menu-icon__string"></span><br/>
-                <span class="menu-icon__string"></span>
-            </div>
-        </div>
+<header class="container header">
+    <div class="menu-icon__row">
+
+        <span class="menu-icon closed" id="menuBtn"></span>
+
+        <nav class="menu-icon__container closed" id="menuContainer">
+            <ul class="menu-icon__list">
+                <li class="menu-icon__item">
+                    <a class="menu-icon__link" href="#">Home</a>
+                </li>
+                <li class="menu-icon__item">
+                    <a class="menu-icon__link" href="#">About us</a>
+                </li>
+                <li class="menu-icon__item">
+                    <a class="menu-icon__link" href="#">Gallery</a>
+                </li>
+                <li class="menu-icon__item">
+                    <a class="menu-icon__link" href="#">Consultation</a>
+                </li>
+                <li class="menu-icon__item">
+                    <a class="menu-icon__link" href="#">Testimonials</a>
+                </li>
+                <li class="menu-icon__item">
+                    <a class="menu-icon__link" href="#">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+
     </div>
-    <div class="container header__container">
+    <div class="header__container">
         <div class="header__row">
             <span class="header__phone">
-                <a class="header__link" href="#">0800 500 300 255</a>
+                     <a class="header__link" href="#">0800 500 300 255</a>
             </span>
             <span class="header__logo"></span>
             <span class="header__call">
-                <a class="header__link" href="#">Call to order</a>
+                    <a class="header__link" href="#">Call to order</a>
             </span>
         </div>
     </div>
-    <nav class="container header__nav">
+    <nav class="header__nav">
         <div class="header__row">
             <ul class="header__list">
                 <li class="header__item">
@@ -68,13 +84,13 @@
 <!-- HEADER END -->
 
 <!-- ARTICLE START -->
-<section class="description">
-    <div class="container description__content">
-        <div class="description__row">
+<section class="container description">
+    <div class="description__row">
+        <div class="description_container">
             <div class="description__title">
-                    <span class="description__text">Miami <span class="description__text-bold">best</span> </span>
-                    <span class="description__text">Realry  <span class="description__text-color">—</span></span>
-                    <span class="description__text-color">this</span>
+                <span class="description__text">Miami <span class="description__text-bold">best</span> </span>
+                <span class="description__text">Realry  <span class="description__text-color">—</span></span>
+                <span class="description__text-color">this</span>
             </div>
             <article class="description__article">
                 <b class="description__subtitle">Over 50 years experience in love.</b>
@@ -98,24 +114,19 @@
                 <b class="description__subtitle">We will never late!</b><br/>
                 <b class="description__subtitle">Guaranteed secure transaction - 100%</b>
             </article>
+
         </div>
     </div>
 </section>
 <!-- ARTICLE END -->
 
 <!-- GALLERY START -->
-<section class="gallery">
-    <div class="container gallery__content">
-        <div class="gallery__row">
+<section class="container gallery">
+    <div class="gallery__row">
+        <div class="gallery__container">
             <div class="gallery__title">
-                <h2 class="gallery__title gallery__title--caption">gallery</h2>
-                <div class="gallery__title gallery__title--line">
-                    <span class="gallery__title gallery__title--line">_________  &nbsp;</span>
-                    <img class="gallery__title gallery__title--line" src="./images/crown.png" alt="underline"/>
-                    <span class="gallery__title gallery__title--line">&nbsp; _________ </span>
-                    <!--  <img src="./images/line.png" alt="underline"/>-->
-                    <!--  <img class="gallery__title gallery__title&#45;&#45;line" src="./images/crown.png" alt="underline"/>-->
-                    <!-- <img src="./images/line.png" alt="underline"/>-->
+                <div class="gallery__title gallery__title--caption">gallery
+                    <div class="gallery__title gallery__title--line"></div>
                 </div>
             </div>
 
@@ -166,22 +177,19 @@
 <!-- GALLERY END -->
 
 <!-- CONSULTATION START -->
-<section class="consultation">
-    <div class="container consultation__content">
-        <div class="consultation__row">
-            <div class="consultation__title">
-                <h2 class="consultation__title consultation__title--caption">consultation</h2>
-                <div class="consultation__title consultation__title--line">
-                    <span class="gallery__title gallery__title--line">___________________  &nbsp;</span>
-                    <img class="gallery__title gallery__title--line" src="./images/crown.png" alt="underline"/>
-                    <span class="gallery__title gallery__title--line">&nbsp; __________________ </span>
+<section class="container consultation">
+    <div class="consultation__row">
+        <div class="consultation__container">
+            <div class="gallery__title">
+                <div class="gallery__title gallery__title--caption">consultation
+                    <div class="gallery__title gallery__title--line"></div>
                 </div>
             </div>
 
             <article class="consultation__article">
                 <h2 class="consultation__title">
-                    <div class="consultation__subtitle">How long have</div>
-                    <div class="consultation__subtitle">you do yourself a gift?</div>
+                    <span class="consultation__subtitle">How long have</span><br/>
+                    <span class="consultation__subtitle">you do yourself a gift?</span>
                 </h2>
                 <p class="consultation__text">The procedural change mezzo forte starts izoritmichesky pickup at
                     these moments stop LA
@@ -190,11 +198,12 @@
                     found a distant historical</p>
             </article>
 
-            <form action="" class="consultation__form">
+            <form action="#" class="consultation__form">
                 <input type="text" class="consultation__item" placeholder="NAME"/>
                 <input type="text" class="consultation__item" placeholder="PHONE"/>
                 <input type="text" class="consultation__item" placeholder="EMAIL"/>
-                <button type="submit" class="consultation__item consultation__item--active" value="">CONSULTATION</button>
+                <button type="submit" class="consultation__item consultation__item--active" value="">CONSULTATION
+                </button>
             </form>
         </div>
     </div>
@@ -202,15 +211,12 @@
 <!-- CONSULTATION END -->
 
 <!-- TESTIMONIALS START -->
-<section class="testimonials">
-    <div class="container testimonials__content">
-        <div class="testimonials__row">
-            <div class="testimonials__title">
-                <h2 class="testimonials__title testimonials__title--caption">testimonials</h2>
-                <div class="testimonials__title testimonials__title--line">
-                    <span class="gallery__title gallery__title--line">_________________  &nbsp;</span>
-                    <img class="gallery__title gallery__title--line" src="./images/crown.png" alt="underline"/>
-                    <span class="gallery__title gallery__title--line">&nbsp; _________________ </span>
+<section class="container testimonials">
+    <div class="testimonials__row">
+        <div class="testimonials__container">
+            <div class="gallery__title">
+                <div class="gallery__title gallery__title--caption">testimonials
+                    <div class="gallery__title gallery__title--line"></div>
                 </div>
             </div>
 
@@ -228,10 +234,10 @@
                         <p class="testimonials__company">
                             <em>Founder Lucoil</em>
                         </p>
-                    </figcaption>
 
-                    <figcaption class="testimonials__description">
-                        <span>Nice work, Certificates National Association of Realtors (USA).</span>
+                        <div class="testimonials__description">
+                            <span>Nice work, Certificates National Association of Realtors (USA).</span>
+                        </div>
                     </figcaption>
                 </figure>
 
@@ -247,14 +253,12 @@
                         <p class="testimonials__company">
                             <em>Ural Steel</em>
                         </p>
-                    </figcaption>
 
-                    <figcaption class="testimonials__description">
-                        <span> My soul is illuminated by an unearthly joy, as these beautiful spring morning,
-                        which I enjoy with all my heart.
-                        <br/>I'm all alone and blissfully happy in the local edge.
-                        </span>
-
+                        <div class="testimonials__description">
+                            <span> My soul is illuminated by an unearthly joy, as these beautiful spring morning,
+                                   which I enjoy with all my heart.<br/>I'm all alone and blissfully happy in the local edge.
+                            </span>
+                        </div>
                     </figcaption>
                 </figure>
 
@@ -270,10 +274,9 @@
                         <p class="testimonials__company">
                             <em>ГазПром</em>
                         </p>
-                    </figcaption>
-
-                    <figcaption class="testimonials__description">
-                        <span> When my lovely valley of steam rises and half-day sun is above an impermeable. thicket</span>
+                        <div class="testimonials__description">
+                            <span> When my lovely valley of steam rises and half-day sun is above an impermeable. thicket</span>
+                        </div>
                     </figcaption>
                 </figure>
 
@@ -285,15 +288,12 @@
 
 
 <!-- CONTACT START -->
-<section class="contact">
-    <div class="container contact__content">
-        <div class="contact__row">
-            <div class="contact__title">
-                <h2 class="contact__title contact__title--caption">contact</h2>
-                <div class="contact__title contact__title--line">
-                    <span class="gallery__title gallery__title--line">__________  &nbsp;</span>
-                    <img class="gallery__title gallery__title--line" src="./images/crown.png" alt="underline"/>
-                    <span class="gallery__title gallery__title--line">&nbsp; __________ </span>
+<section class="container contact">
+    <div class="contact__row">
+        <div class="contact__container">
+            <div class="gallery__title">
+                <div class="gallery__title gallery__title--caption">contact
+                    <div class="gallery__title gallery__title--line"></div>
                 </div>
             </div>
 
@@ -314,7 +314,7 @@
             <form action="#" class="contact__form" method="post">
                 <input type="text" class="contact__item" placeholder="NAME"/>
                 <input type="text" class="contact__item" placeholder="EMAIL"/>
-                <textarea type="text" class="contact__item contact__item--message">MESSAGE</textarea>
+                <textarea class="contact__item contact__item--message">MESSAGE</textarea>
                 <button type="submit" class="contact__item contact__item--active" value="">WRITE TO US</button>
             </form>
         </div>
@@ -323,56 +323,87 @@
 <!-- CONTACT END -->
 
 <!-- BUTTONS START -->
-<!--<section class="buttons">
-    <div class="container buttons__content">
-        <div class="buttons__row">
+<section class="container buttons">
+    <div class="buttons__row">
+        <div class="buttons__container">
             <div class="buttons__title">
-                <h2 class="buttons__title buttons__title&#45;&#45;caption">buttons</h2>
-                <div class="buttons__title buttons__title&#45;&#45;line">
-                    <span class="gallery__title gallery__title--line">___________  &nbsp;</span>
-                    <img class="gallery__title gallery__title--line" src="./images/crown.png" alt="underline"/>
-                    <span class="gallery__title gallery__title--line">&nbsp; ___________ </span>
+                <div class="buttons__title buttons__title--caption">buttons
+                    <div class="buttons__title buttons__title--line"></div>
                 </div>
             </div>
+
+            <div class="buttons__block">
+
+                <input type="checkbox" class="buttons__play" value="Play" id="button_play" name="button_play">
+                <label class="buttons__label buttons__label--play" for="button_play"></label>
+
+                <input type="checkbox" class="buttons__on" value="On" id="button_on" name="button_on">
+                <label class="buttons__label buttons__label--on" for="button_on"></label>
+
+            </div>
+
+            <div class="buttons__block">
+                <input type="checkbox" class="buttons__colors" id="buttons__colors--darkBlue" name="buttons__colors"
+                       value="On">
+                <label class="buttons__label buttons__label--darkBlue" for="buttons__colors--darkBlue"></label>
+
+                <input type="checkbox" class="buttons__colors" id="buttons__colors--green" name="buttons__colors"
+                       value="On">
+                <label class="buttons__label buttons__label--green" for="buttons__colors--green"></label>
+
+                <input type="checkbox" class="buttons__colors" id="buttons__colors--blue" name="buttons__colors"
+                       value="On">
+                <label class="buttons__label buttons__label--blue" for="buttons__colors--blue"></label>
+
+                <input type="checkbox" class="buttons__colors" id="buttons__colors--orange" name="buttons__colors"
+                       value="On">
+                <label class="buttons__label buttons__label--orange" for="buttons__colors--orange"></label>
+
+                <input type="checkbox" class="buttons__colors" id="buttons__colors--red" name="buttons__colors"
+                       value="On">
+                <label class="buttons__label buttons__label--red" for="buttons__colors--red"></label>
+
+            </div>
+
+            <div class="buttons__block">
+
+                <input type="checkbox" class="buttons__size buttons__offMid" value="Off" id="buttons__offMid"
+                       name="buttons__offMid">
+                <label class="buttons__label buttons__label--offMid" for="buttons__offMid"></label>
+
+                <input type="checkbox" class="buttons__size buttons__offLarge" value="Off" id="buttons__offLarge"
+                       name="buttons__offLarge">
+                <label class="buttons__label buttons__label--offLarge" for="buttons__offLarge"></label>
+
+                <input type="checkbox" class="buttons__size buttons__onMid" value="On" id="buttons__onMid"
+                       name="buttons__onMid">
+                <label class="buttons__label buttons__label--onMid" for="buttons__onMid"></label>
+
+                <input type="checkbox" class="buttons__size buttons__offSmall" value="Off" id="buttons__offSmall"
+                       name="buttons__offSmall">
+                <label class="buttons__label buttons__label--offSmall" for="buttons__offSmall"></label>
+
+                <input type="checkbox" class="buttons__size buttons__onSmall" value="On" id="buttons__onSmall"
+                       name="buttons__onSmall">
+                <label class="buttons__label buttons__label--onSmall" for="buttons__onSmall"></label>
+
+            </div>
+
         </div>
-
-        <form class="buttons__row buttons__row&#45;&#45;stretch">
-                <input type="text" class="buttons__play" value="Play">
-                <input type="text" class="buttons__pause" value="Pause">
-                <input type="text" class="buttons__oN" value="On">
-                <input type="text" class="buttons__oFF" value="Off">
-        </form>
-
-        <form class="buttons__row  buttons__row&#45;&#45;stretch">
-            <input type="text" class="buttons__on buttons__on&#45;&#45;darkBlue" value="On">
-            <input type="text" class="buttons__on buttons__on&#45;&#45;green" value="On">
-            <input type="text" class="buttons__on buttons__on&#45;&#45;blue" value="On">
-            <input type="text" class="buttons__on buttons__on&#45;&#45;orange" value="On">
-            <input type="text" class="buttons__on buttons__on&#45;&#45;red" value="On">
-        </form>
-
-        <form class="buttons__row  buttons__row&#45;&#45;stretch">
-            <input type="text" class="buttons__offMid" value="Off">
-            <input type="text" class="buttons__offLarge" value="Off">
-            <input type="text" class="buttons__onMid" value="On">
-            <input type="text" class="buttons__offSmall" value="Off">
-            <input type="text" class="buttons__onSmall" value="On">
-        </form>
-
     </div>
-</section>-->
+</section>
 <!-- BUTTONS END -->
 
 <!-- FOOTER START -->
-<footer class="footer">
+<footer class="container footer">
     <div class="footer__row">
-        <div class="container footer__container">
+        <div class="footer__container">
             <div class="footer__logo"></div>
             <div class="footer__copyright">@ 2013 MIAMI.</div>
         </div>
     </div>
 </footer>
 <!-- FOOTER END -->
-
+<script src="js/menu_mobile.js"></script>
 </body>
 </html>

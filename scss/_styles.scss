@@ -8,7 +8,6 @@ body {
 
 // HEADER START
 .header {
-  @include make-sm-column(12);
   background: $defaultHeaderBackground;
   background-position: 50% 35%;
   background-repeat: no-repeat;
@@ -18,7 +17,7 @@ body {
   font-weight: bold;
   display: flex;
   flex-direction: column;
-  color: $logoColor;
+  color: $headerItemColor;
   width: 100%;
 
   &__nav {
@@ -35,7 +34,7 @@ body {
   }
 
   @media #{$bp-note} {
-    font-size: 14px;
+    font-size: $fontXSmallSize;
   }
 
   @media #{$bp-tablet} {
@@ -47,6 +46,7 @@ body {
   }
 
   &__container {
+    @include make-sm-column(12);
     width: 100%;
     color: $defaultFill;
     flex-grow: 1;
@@ -56,49 +56,39 @@ body {
   }
 
   &__phone {
-    @include make-sm-column(4);
     @include link ();
     text-align: left;
     float: left;
   }
 
   &__logo {
-    @include make-sm-column-offset(1);
-    @include make-sm-column(2);
-    @include make-sm-column-offset(1);
     background: $logoPicture;
     -webkit-text-fill-color: $logoColor;
     fill: $logoColor;
     color: $logoColor;
     padding: 50px;
-    top: 10px;
-
-    @media #{$bp-note} {
-      padding: 30px;
-    }
 
     @media #{$bp-tablet} {
-      padding: 30px;
+      padding: 40px;
     }
 
     @media #{$bp-mobile} {
-      padding: 30px;
+      padding: 35px;
     }
 
   }
 
   &__call {
-    @include make-sm-column(4);
     @include link ();
     text-align: right;
     float: right !important;
   }
 
   &__list {
+    @include make-sm-column(12);
     display: flex;
     justify-content: space-between;
     width: 100%;
-    @include make-sm-column(12);
     margin-bottom: 30px;
   }
 
@@ -117,29 +107,57 @@ body {
 
 .menu-icon {
   display: none;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+  margin: 15px;
 
-  &:hover {
-    cursor: pointer;
-  }
-
-  &__sign {
-    @include make-sm-column(2);
+  &__item {
+    @include link();
     display: block;
+    margin: 20px 0;
   }
 
-  &__string {
-    background-color: $colorLink;
-    padding: 0 15px;
-    font-size: 2px;
-    position: relative;
+  &__link {
+    color: $colorLink;
+  }
 
-    &:first-child {
-      top: 20px;
-    }
+  &, &:before,
+  &:after {
+    border-top: 2px solid $headerItemColor;
+    transition: all .3s;
+  }
 
-    &:last-child {
-      bottom: 20px;
-    }
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0;
+    right: 0;
+  }
+
+  &:before {
+    top: 7px;
+  }
+
+  &:after {
+    top: 17px;
+  }
+
+  &.opened {
+    border-top-color: transparent;
+  }
+
+  &.opened:after {
+    transform: rotate(45deg);
+    top: 12px;
+  }
+
+  &.opened:before {
+    transform: rotate(-45deg);
+    top: 12px;
   }
 
   @media #{$bp-tablet} {
@@ -148,19 +166,53 @@ body {
 
   @media #{$bp-mobile} {
     display: block;
-    margin-left: 0 !important;
   }
 
+}
+
+.menu-icon__container {
+  padding-top: 20px;
+  width: 250px;
+
+  .menu-icon__list {
+    list-style: none;
+    padding: 0;
+    margin: 15px;
+  }
+
+  .menu-icon__item {
+    margin-bottom: 10px;
+  }
+
+  .menu-icon__link {
+    display: block;
+    padding: 10px 0;
+    color: $defaultButtonColor;
+    background: $fontBackgroundButton;
+    text-decoration: none;
+    text-align: center;
+    font-family: $defaultFont;
+  }
+
+  &.closed {
+    display: none;
+  }
+
+  &.opened {
+    display: block;
+  }
 }
 
 // HEADER END
 
 //ARTICLE
 .description {
-  @include make-sm-column(12);
   color: $defaultText;
   background: $fontBackgroundSectionEven;
-  margin: 100px 0;
+
+  &__container {
+    @include make-sm-column(12);
+  }
 
   @media #{$bp-mobile} {
     margin: 50px 0;
@@ -173,35 +225,30 @@ body {
     font-weight: lighter;
     text-align: left;
     margin: 5% 0;
-    line-height: 0.5;
     display: flex;
     flex-direction: column;
-
-    @media #{$bp-tablet} {
-      line-height: 1;
-    }
-
-    @media #{$bp-mobile} {
-      line-height: 1;
-    }
-
   }
 
   &__text {
-    @include make-sm-column(4);
     margin: 20px 0;
-    display: inline-flex;
+
+    @media #{$bp-tablet} {
+      margin: 15px 0;
+    }
+
+    @media #{$bp-mobile} {
+      margin: 10px 0;
+    }
+
   }
 
   &__text-bold {
-    @include make-sm-column(1);
-    font-weight: 500;
+    font-weight: 900;
     margin: 20px 0;
     top: -20px;
   }
 
   &__text-color {
-    @include make-sm-column(1);
     color: $fontTitleMarkColor;
     margin: 20px 0;
     top: -20px;
@@ -236,7 +283,7 @@ body {
   @media #{$bp-tablet} {
     .description {
       &__title {
-        font-size: 36px;
+        font-size: $fontMidSize;
       }
       &__text-bold {
         font-weight: 600;
@@ -245,13 +292,16 @@ body {
   }
 
   @media #{$bp-mobile} {
-    font-size: 12px;
+    font-size: $fontXSmallSize;
     .description {
       &__title {
-        font-size: 36px;
+        font-size: $fontMidSize;
       }
       &__text-bold {
         font-weight: 700;
+      }
+      &__article {
+        margin: 5% 0 15% 0;
       }
     }
   }
@@ -262,12 +312,11 @@ body {
 
 //GALLERY START
 .gallery {
-  @include make-sm-column(12);
   @include title_section ();
   background: $fontBackgroundSectionOdd;
 
-  &__content {
-    margin: -48px 0 100px 0;
+  &__container {
+    margin: -15px 0 100px 0;
   }
 
   &__image {
@@ -327,35 +376,22 @@ body {
     }
 
   }
+
 }
 
 //GALLERY END
 
 //CONSULTATION START
 .consultation {
-  @include make-sm-column(12);
   @include title_section ();
   background: $fontBackgroundSectionEven;
 
-  @media #{$bp-mobile} {
-    margin: 50px 0;
-    &__title {
-      &--caption {
-        margin: -80px 0 0;
-      }
-    }
-  }
-
-  &__content {
-    margin: -48px 0 100px 0;
-  }
-
   &__container {
-    width: $width;
+    margin: -15px 0 100px 0;
   }
 
   &__subtitle {
-    font-weight: 500;
+    font-weight: 400;
   }
 
   &__article {
@@ -397,16 +433,12 @@ body {
 
 //TESTIMONIALS START
 .testimonials {
-  @include make-sm-column(12);
   @include title_section ();
   background: $fontBackgroundSectionOdd;
 
-  @media #{$bp-mobile} {
-    margin: 50px 0;
-  }
-
-  &__content {
-    margin: -48px 0 100px 0;
+  &__container {
+    @include make-sm-column(12);
+    margin: -15px 0 100px 0;
   }
 
   &__portret {
@@ -428,6 +460,7 @@ body {
 
   &__description {
     text-align: center;
+    font-weight: 500;
   }
 
   &__items {
@@ -441,14 +474,12 @@ body {
       position: absolute;
       top: 20%;
       left: -10%;
-     //  left: -5%;
-     // content: '\201e';
       content: '';
-      background: url(../images/quotes.png) no-repeat;
+      background: url(../images/quotes.svg) no-repeat;
       background-size: cover;
-      width: 60px;
+      width: 65px;
       height: 50px;
-     // font-size: 110px;
+      transform: rotate(180deg);
     }
 
   }
@@ -471,8 +502,8 @@ body {
       width: 50%;
       margin-left: 25%;
       &:before {
-        top: 25%;
-        left: -10%;
+        top: 30%;
+        left: -5%;
       }
     }
   }
@@ -480,11 +511,11 @@ body {
   @media #{$bp-mobile} {
 
     .testimonials__items {
-      width: 55%;
+      width: 50%;
       margin-left: 25%;
       &:before {
         top: 20%;
-        left: -8%;
+        left: -10%;
       }
     }
   }
@@ -495,28 +526,18 @@ body {
 
 //CONTACT START
 .contact {
-  @include make-sm-column(12);
   @include title_section ();
   background: $fontBackgroundSectionEven;
 
-  @media #{$bp-mobile} {
-    margin: 50px 0;
-    &__title {
-      &--caption {
-        margin: -80px 0 0;
-      }
-    }
-  }
-
-  &__content {
-    margin: -48px 0 100px 0;
+  &__container {
+    margin: -15px 0 100px 0;
   }
 
   &__information {
     @include make-sm-column(6);
     margin: 6% 0;
     font-size: $fontDescriptionSize;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   &__email {
@@ -553,171 +574,220 @@ body {
 
 //BUTTONS START
 .buttons {
-  @include make-sm-column(12);
   @include title_section();
   background: $fontBackgroundSectionOdd;
 
-  &__content {
-    margin: -48px 0 100px 0;
+  &__container {
+    @include make-sm-column(12);
+    margin: -15px 0 100px 0;
   }
 
-  &__row--stretch {
-    display: flex;
-    justify-content: space-between;
+  &__block {
     margin: 50px 0;
+    display: flex;
+    justify-content: center;
   }
 
-  &__play {
-    position: relative;
-    width: 150px;
+  &__play + &__label:before {
+    content: 'Play';
+    position: absolute;
+    left: 0;
+    width: inherit;
     height: 40px;
-    background-color: $darkBlue;
+    background: linear-gradient(to top, $white, $darkBlue);
     border: 1px solid $darkBlue;
     border-radius: 5px;
     color: $white;
     text-align: center;
+    transition: 0.3s;
   }
 
-  &__pause {
-    position: relative;
-    width: 150px;
-    height: 40px;
-    background-color: $blueRomance;
-    border: 1px solid $blueRomance;
-    border-radius: 5px;
-    text-align: center;
+  &__play:checked + &__label:before,
+  &__on:checked + &__label:before {
+    content: 'Off';
+    background: linear-gradient(to top, $white, $silverSand);
+    border: $silverSand;
+    color: $black;
   }
 
-  &__oN {
+  &__on:checked + &__label:after {
+    left: calc(100% - 18px);
+  }
+
+  &__colors,
+  &__play,
+  &__on,
+  &__size {
+    display: none;
+  }
+
+  &__label {
     position: relative;
     width: 80px;
     height: 40px;
-    background-color: $darkBlue;
-    border: 1px solid $darkBlue;
-    border-radius: 30px;
-    color: $white;
-    text-align: center;
-  }
-
-  &__oFF {
-    position: relative;
-    width: 80px;
-    height: 40px;
-    background-color: $blueRomance;
-    border: 1px solid $blueRomance;
-    border-radius: 30px;
-    text-align: center;
-  }
-
-
-
-  &__on {
-    width: 100px;
-    height: 40px;
     border-radius: 5px;
-    text-align: center;
     color: $white;
-    position: relative;
+    text-align: center;
+    transition: 0.3s;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 30px;
 
     &--darkBlue {
-      background-color: $purple;
-      border: 1px solid $purple;
+      background: linear-gradient(to top, $white, $darkBlue);
+      border: 1px solid $darkBlue;
     }
 
     &--green {
-      background-color: $apple;
+      background: linear-gradient(to top, $white, $apple);
       border: 1px solid $apple;
     }
 
     &--blue {
-      background-color: $dodgerBlue;
+      background: linear-gradient(to top, $white, $dodgerBlue);
       border: 1px solid $dodgerBlue;
     }
 
     &--orange {
-      background-color: $ripeLemon;
+      background: linear-gradient(to top, $white, $ripeLemon);
       border: 1px solid $ripeLemon;
     }
 
     &--red {
-      background-color: $crimson;
+      background: linear-gradient(to top, $white, $crimson);
       border: 1px solid $crimson;
+    }
+
+    &--offMid {
+      background: linear-gradient(to top, $white, $blueRomance);
+      border: 1px solid $blueRomance;
+    }
+
+    &--offLarge {
+      width: 150px;
+      height: 60px;
+      background: linear-gradient(to top, $white, $frenchPass);
+      border: 1px solid $frenchPass;
+    }
+
+    &--onMid {
+      width: 100px;
+      height: 40px;
+      background: linear-gradient(to top, $white, $purple);
+      border: 1px solid $purple;
+    }
+
+    &--offSmall {
+      width: 80px;
+      height: 35px;
+      background: linear-gradient(to top, $white, $blueRomance);
+      border: 1px solid $blueRomance;
+    }
+
+    &--onSmall {
+      width: 50px;
+      height: 25px;
+      background: linear-gradient(to top, $white, $purple);
+      border: 1px solid $purple;
+    }
+
+    /*  &--onSmall:after {
+        width: 10px;
+        height: calc(100% - 0.5px);
+        left: calc(100% - 10.5px);
+        border-radius: 2px;
+        font-size: 8px;
+      }*/
+
+    &--play {
+      width: 140px;
+    }
+
+    &--on {
+      border-radius: 25px;
     }
 
   }
 
-/*  &__on:before {
-    content: "KJHKJHKLKJ";
-   width: 10px;
-   height: 40px;
-    background-color: $white;
+  &__colors + &__label:before,
+  &__on + &__label:before,
+  &__size + &__label:before {
+    content: 'On';
+    position: relative;
+    width: inherit;
+    height: calc(100%);
     border-radius: 5px;
+    color: $white;
+    transition: 0.3s;
+    line-height: 2;
+  }
+
+  &__on + &__label:before {
     position: absolute;
-    bottom: 10px;
-  }*/
-
-  &__offMid {
-    width: 110px;
+    left: 0;
+    width: inherit;
     height: 40px;
-    border-radius: 5px;
-    text-align: center;
-    background-color: $blueRomance;
-    border: 1px solid $blueRomance;
+    background: linear-gradient(to top, $white, $darkBlue);
+    border: 1px solid $darkBlue;
+    border-radius: 25px;
   }
 
-  &__offLarge {
-    width: 150px;
-    height: 60px;
+  &__play + &__label:after,
+  &__colors + &__label:after,
+  &__on + &__label:after,
+  &__size + &__label:after {
+    content: '';
+    position: absolute;
+    left: calc(100% - 18px);
+    width: 18px;
+    height: calc(100% - 1px);
     border-radius: 5px;
-    text-align: center;
-    background-color: $blueRomance;
-    border: 1px solid $blueRomance;
-  }
-
-  &__onMid {
-    width: 100px;
-    height: 40px;
-    border-radius: 5px;
-    text-align: center;
+    background: $white;
     color: $white;
-    background-color: $purple;
-    border: 1px solid $purple;
+    right: 5px;
+    transition: 0.3s;
+    float: left;
   }
 
-  &__offSmall {
-    width: 80px;
-    height: 35px;
-    border-radius: 5px;
-    text-align: center;
-    background-color: $blueRomance;
-    border: 1px solid $blueRomance;
+  &__on + &__label:after {
+    position: absolute;
+    top: 2px;
+    width: 30px;
+    height: 32px;
+    border-radius: 25px;
   }
 
-  &__onSmall {
-    width: 50px;
-    height: 25px;
-    border-radius: 5px;
-    text-align: center;
-    color: $white;
-    background-color: $purple;
-    border: 1px solid $purple;
+  &__colors:checked + &__label:before,
+  &__size:checked + &__label:before {
+    content: 'Off';
+    display: block;
+    width: calc(100% - 10px);
+    height: calc(100%);
+    position: absolute;
+    right: 0;
+    background: linear-gradient(to left, $white, $silverSand);
+    border: $silverSand;
+    color: $black;
+    transition: all 0.3s;
   }
 
+  &__play:checked + &__label:after,
+  &__colors:checked + &__label:after,
+  &__size:checked + &__label:after {
+    left: calc(1%);
+  }
 
-  /*  &__play:after {
-  content: "Play";
-      height: 10px;
-      width: 15px;
-      position: absolute;
-      left: 2px;
-    }*/
+  &__on:checked + &__label:after {
+    left: calc(1% - 10px);
+  }
+
 }
 
 //BUTTONS END
 
 //FOOTER START
 .footer {
-  @include make-sm-column(12);
   background: $footerBackground;
   background-position: 50% 35%;
   background-repeat: no-repeat;
@@ -725,6 +795,8 @@ body {
   height: 900px;
 
   &__container {
+    @include make-sm-column(12);
+    @include clearfix();
     color: $defaultFill;
     flex-grow: 1;
     line-height: 8;
@@ -738,19 +810,17 @@ body {
   }
 
   &__logo {
-    @include make-sm-column(2);
+    @include make-sm-column(12);
     background: $logoPicture;
     -webkit-text-fill-color: $logoColor;
     fill: $logoColor;
     color: $logoColor;
-    text-align: center;
     width: 100px;
     height: 100px;
     margin: 300px auto;
   }
 
   &__copyright {
-    @include make-sm-column(4);
     text-align: center;
     margin: 0 auto;
     font-size: $fontSmallSize;
@@ -760,4 +830,3 @@ body {
 }
 
 //FOOTER END
-

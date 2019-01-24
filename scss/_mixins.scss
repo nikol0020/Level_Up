@@ -22,7 +22,7 @@
   text-align: center;
   background: $fontBackgroundSectionOdd;
   border: none;
-  font-weight: 500;
+  font-weight: 700;
 
   &[type="text"]::-webkit-input-placeholder {
     color: $defaultText;
@@ -50,20 +50,41 @@
       text-transform: uppercase;
       text-align: center;
       font-size: $fontTitleSize;
-      font-weight: lighter;
-
-      @media #{$bp-mobile} {
-        margin: -25px 0 0;
-      }
+      font-weight: 100;
+      width: min-content;
+      margin: 0 auto;
     }
 
     &--line {
+      color: $fontTitleMarkColor;
+      font-weight: 200;
       color: $fontTitleMarkColor;
       font-weight: 500;
       text-align: center;
       vertical-align: text-bottom;
       position: relative;
-      top: -10px;
+      top: 15px;
+      background: url("../images/crown.png") no-repeat center center;
+      padding: 5px 0 10px 0;
+    }
+
+    &--line:before,
+    &--line:after {
+      content: "";
+      width: calc(45% - 5px);
+      position: relative;
+      display: block;
+      height: 2px;
+      background: #0ea2f1;
+      text-align: center;
+    }
+
+    &--line:before {
+      float: left;
+    }
+
+    &--line:after {
+      float: right;
     }
 
   }
@@ -75,10 +96,5 @@
   }
 }
 
-/*@mixin pseudo($display: block, $pos: absolute, $content: '') {
-  content: $content;
-  display: $display;
-  position: $pos;
-};*/
 
 
