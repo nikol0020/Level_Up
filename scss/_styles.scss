@@ -8,20 +8,22 @@ body {
 
 // HEADER START
 .header {
+  @include center();
   background: $defaultHeaderBackground;
-  background-position: 50% 35%;
+  background-position: 50% 40%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 900px;
+  height: 940px;
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
   flex-direction: column;
   color: $headerItemColor;
-  width: 100%;
+  width: 100%;;
 
   &__nav {
-    display: block;
+    @include center();
+    display: flex;
 
     @media #{$bp-tablet} {
       display: none;
@@ -57,6 +59,7 @@ body {
 
   &__phone {
     @include link ();
+    padding-left: 15px;
     text-align: left;
     float: left;
   }
@@ -81,6 +84,7 @@ body {
   &__call {
     @include link ();
     text-align: right;
+    padding-right: 15px;
     float: right !important;
   }
 
@@ -89,12 +93,11 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   &__item {
     @include link();
-    display: block;
     margin: 20px 0;
     list-style-type: none;
   }
@@ -176,7 +179,6 @@ body {
 
   .menu-icon__list {
     list-style: none;
-    padding: 0;
     margin: 15px;
   }
 
@@ -207,6 +209,7 @@ body {
 
 //ARTICLE
 .description {
+  @include center();
   color: $defaultText;
   background: $fontBackgroundSectionEven;
 
@@ -313,10 +316,11 @@ body {
 //GALLERY START
 .gallery {
   @include title_section ();
+  @include center();
   background: $fontBackgroundSectionOdd;
 
   &__container {
-    margin: -15px 0 100px 0;
+    margin: -64px 0 100px 0;
   }
 
   &__image {
@@ -384,10 +388,11 @@ body {
 //CONSULTATION START
 .consultation {
   @include title_section ();
+  @include center();
   background: $fontBackgroundSectionEven;
 
   &__container {
-    margin: -15px 0 100px 0;
+    margin: -64px 0 100px 0;
   }
 
   &__subtitle {
@@ -433,12 +438,13 @@ body {
 
 //TESTIMONIALS START
 .testimonials {
-  @include title_section ();
+  @include title_section();
+  @include center();
   background: $fontBackgroundSectionOdd;
 
   &__container {
     @include make-sm-column(12);
-    margin: -15px 0 100px 0;
+    margin: -64px 0 100px 0;
   }
 
   &__portret {
@@ -526,11 +532,12 @@ body {
 
 //CONTACT START
 .contact {
+  @include center();
   @include title_section ();
   background: $fontBackgroundSectionEven;
 
   &__container {
-    margin: -15px 0 100px 0;
+    margin: -64px 0 100px 0;
   }
 
   &__information {
@@ -575,15 +582,16 @@ body {
 //BUTTONS START
 .buttons {
   @include title_section();
+  @include center();
   background: $fontBackgroundSectionOdd;
 
   &__container {
     @include make-sm-column(12);
-    margin: -15px 0 100px 0;
+    margin: -64px 0 100px 0;
   }
 
   &__block {
-    margin: 50px 0;
+    margin: 100px 0 30px 0;
     display: flex;
     justify-content: center;
   }
@@ -594,7 +602,7 @@ body {
     left: 0;
     width: inherit;
     height: 40px;
-    background: linear-gradient(to top, $white, $darkBlue);
+    background: $darkBlue;
     border: 1px solid $darkBlue;
     border-radius: 5px;
     color: $white;
@@ -605,7 +613,7 @@ body {
   &__play:checked + &__label:before,
   &__on:checked + &__label:before {
     content: 'Off';
-    background: linear-gradient(to top, $white, $silverSand);
+    background: $silverSand;
     border: $silverSand;
     color: $black;
   }
@@ -635,70 +643,70 @@ body {
     margin: 0 30px;
 
     &--darkBlue {
-      background: linear-gradient(to top, $white, $darkBlue);
+      background: $darkBlue;
       border: 1px solid $darkBlue;
     }
 
     &--green {
-      background: linear-gradient(to top, $white, $apple);
+      background: $apple;
       border: 1px solid $apple;
     }
 
     &--blue {
-      background: linear-gradient(to top, $white, $dodgerBlue);
+      background: $dodgerBlue;
       border: 1px solid $dodgerBlue;
     }
 
     &--orange {
-      background: linear-gradient(to top, $white, $ripeLemon);
+      background: $ripeLemon;
       border: 1px solid $ripeLemon;
     }
 
     &--red {
-      background: linear-gradient(to top, $white, $crimson);
+      background: $crimson;
       border: 1px solid $crimson;
     }
 
     &--offMid {
-      background: linear-gradient(to top, $white, $blueRomance);
+      background: $blueRomance;
       border: 1px solid $blueRomance;
     }
 
     &--offLarge {
       width: 150px;
       height: 60px;
-      background: linear-gradient(to top, $white, $frenchPass);
+      background: $frenchPass;
       border: 1px solid $frenchPass;
     }
 
     &--onMid {
       width: 100px;
       height: 40px;
-      background: linear-gradient(to top, $white, $purple);
+      background: $purple;
       border: 1px solid $purple;
     }
 
     &--offSmall {
       width: 80px;
       height: 35px;
-      background: linear-gradient(to top, $white, $blueRomance);
+      background: $blueRomance;
       border: 1px solid $blueRomance;
     }
 
     &--onSmall {
       width: 50px;
       height: 25px;
-      background: linear-gradient(to top, $white, $purple);
+      background: $purple;
       border: 1px solid $purple;
     }
 
-    /*  &--onSmall:after {
-        width: 10px;
-        height: calc(100% - 0.5px);
-        left: calc(100% - 10.5px);
-        border-radius: 2px;
-        font-size: 8px;
-      }*/
+  /*  &--onSmall:after {
+      width: 10px;
+      height: calc(100% - 0.5px);
+      left: calc(100% - 10.5px);
+      border-radius: 2px;
+      font-size: 8px;
+    }*/
 
     &--play {
       width: 140px;
@@ -728,7 +736,7 @@ body {
     left: 0;
     width: inherit;
     height: 40px;
-    background: linear-gradient(to top, $white, $darkBlue);
+    background: $darkBlue;
     border: 1px solid $darkBlue;
     border-radius: 25px;
   }
@@ -766,7 +774,7 @@ body {
     height: calc(100%);
     position: absolute;
     right: 0;
-    background: linear-gradient(to left, $white, $silverSand);
+    background: $silverSand;
     border: $silverSand;
     color: $black;
     transition: all 0.3s;
@@ -788,6 +796,7 @@ body {
 
 //FOOTER START
 .footer {
+  @include center();
   background: $footerBackground;
   background-position: 50% 35%;
   background-repeat: no-repeat;

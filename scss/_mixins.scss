@@ -45,7 +45,7 @@
 @mixin title_section() {
   color: $defaultText;
   &__title {
-
+    text-align: center;
     &--caption {
       text-transform: uppercase;
       text-align: center;
@@ -53,42 +53,42 @@
       font-weight: 100;
       width: min-content;
       margin: 0 auto;
-    }
-
-    &--line {
-      color: $fontTitleMarkColor;
+      //color: $fontTitleMarkColor;
       font-weight: 200;
-      color: $fontTitleMarkColor;
       font-weight: 500;
-      text-align: center;
       vertical-align: text-bottom;
       position: relative;
       top: 15px;
-      background: url("../images/crown.png") no-repeat center center;
-      padding: 5px 0 10px 0;
-    }
+      background: url("../images/crown.png") no-repeat center bottom;
+      padding: 5px 0 20px 0;
 
-    &--line:before,
-    &--line:after {
-      content: "";
-      width: calc(45% - 5px);
-      position: relative;
-      display: block;
-      height: 2px;
-      background: #0ea2f1;
-      text-align: center;
-    }
+      &:before,
+      &:after {
+        content: "";
+        width: calc(45% - 5px);
+        position: absolute;
+        display: block;
+        height: 2px;
+        background: #0ea2f1;
+        text-align: center;
+        bottom: 5px;
+      }
 
-    &--line:before {
-      float: left;
-    }
+      &:before {
+        left: 0;
+      }
 
-    &--line:after {
-      float: right;
+      &:after {
+        right: 0;
+      }
     }
-
   }
 }
+
+ @mixin center {
+   display: flex;
+   justify-content: center;
+ }
 
 @mixin getRow {
   div[class*="__row"] {
