@@ -597,29 +597,17 @@ body {
   }
 
   &__play + &__label:before {
-    content: 'Play';
+    content: '';
     position: absolute;
     left: 0;
     width: inherit;
     height: 40px;
-    background: $darkBlue;
-    border: 1px solid $darkBlue;
     border-radius: 5px;
     color: $white;
     text-align: center;
-    transition: 0.3s;
-  }
-
-  &__play:checked + &__label:before,
-  &__on:checked + &__label:before {
-    content: 'Off';
-    background: $silverSand;
-    border: $silverSand;
-    color: $black;
-  }
-
-  &__on:checked + &__label:after {
-    left: calc(100% - 18px);
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+    transition: 0.4s ease-out;
   }
 
   &__colors,
@@ -636,11 +624,10 @@ body {
     border-radius: 5px;
     color: $white;
     text-align: center;
-    transition: 0.3s;
-    float: left;
     cursor: pointer;
     overflow: hidden;
     margin: 0 30px;
+    line-height: 2;
 
     &--darkBlue {
       background: $darkBlue;
@@ -722,22 +709,19 @@ body {
   &__on + &__label:before,
   &__size + &__label:before {
     content: 'On';
-    position: relative;
+    position: absolute;
+    left: 0;
     width: inherit;
     height: calc(100%);
     border-radius: 5px;
     color: $white;
-    transition: 0.3s;
     line-height: 2;
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+    transition: 0.4s ease-out;
   }
 
   &__on + &__label:before {
-    position: absolute;
-    left: 0;
-    width: inherit;
-    height: 40px;
-    background: $darkBlue;
-    border: 1px solid $darkBlue;
     border-radius: 25px;
   }
 
@@ -747,15 +731,14 @@ body {
   &__size + &__label:after {
     content: '';
     position: absolute;
-    left: calc(100% - 18px);
-    width: 18px;
+    left: calc(100% - 15px);
+    width: 15px;
     height: calc(100% - 1px);
     border-radius: 5px;
     background: $white;
     color: $white;
     right: 5px;
-    transition: 0.3s;
-    float: left;
+    transition: 0.5s;
   }
 
   &__on + &__label:after {
@@ -766,18 +749,15 @@ body {
     border-radius: 25px;
   }
 
+  &__play:checked + &__label:before,
+  &__on:checked + &__label:before,
   &__colors:checked + &__label:before,
   &__size:checked + &__label:before {
     content: 'Off';
-    display: block;
-    width: calc(100% - 10px);
-    height: calc(100%);
-    position: absolute;
-    right: 0;
     background: $silverSand;
     border: $silverSand;
     color: $black;
-    transition: all 0.3s;
+    transform: scaleX(1);
   }
 
   &__play:checked + &__label:after,
@@ -787,7 +767,7 @@ body {
   }
 
   &__on:checked + &__label:after {
-    left: calc(1% - 10px);
+    left: calc(1% - 18px);
   }
 
 }
