@@ -594,6 +594,7 @@ body {
     margin: 100px 0 30px 0;
     display: flex;
     justify-content: center;
+    align-items: baseline;
   }
 
   &__play + &__label:before,
@@ -609,8 +610,8 @@ body {
     color: $white;
     text-align: center;
     transform: scaleX(0);
-    transform-origin: 100% 50%;
-    transition: 0.4s ease-out;
+    transform-origin: 100% 100%;
+    transition: all 0.3s linear;
   }
 
   &__colors,
@@ -630,11 +631,13 @@ body {
     cursor: pointer;
     overflow: hidden;
     margin: 0 30px;
-    line-height: 2;
+    line-height: 2.3;
+    transition: all 0.3s linear;
+    font-weight: 500;
 
     &--darkBlue {
-      background: $darkBlue;
-      border: 1px solid $darkBlue;
+      background: $indigo;
+      border: 1px solid $indigo;
     }
 
     &--green {
@@ -643,67 +646,71 @@ body {
     }
 
     &--blue {
-      background: $dodgerBlue;
-      border: 1px solid $dodgerBlue;
+      background: $skyBlue;
+      border: 1px solid $skyBlue;
     }
 
     &--orange {
-      background: $ripeLemon;
-      border: 1px solid $ripeLemon;
+      background: $creamCan;
+      border: 1px solid $creamCan;
     }
 
     &--red {
-      background: $crimson;
-      border: 1px solid $crimson;
+      background: $chestnutRose;
+      border: 1px solid $chestnutRose;
     }
 
     &--offMid {
-      background: $blueRomance;
-      border: 1px solid $blueRomance;
+      background: $indigo;
+      border: 1px solid $indigo;
+      font-size: 14px;
+      line-height: 2.6;
     }
 
     &--offLarge {
-      width: 150px;
+      width: 120px;
       height: 60px;
-      background: $frenchPass;
-      border: 1px solid $frenchPass;
+      background: $indigo;
+      border: 1px solid $indigo;
+      line-height: 3.5;
     }
 
     &--onMid {
-      width: 100px;
-      height: 40px;
-      background: $purple;
-      border: 1px solid $purple;
+      width: 85px;
+      height: 45px;
+      background: $indigo;
+      border: 1px solid $indigo;
+      line-height: 2.6;
     }
 
     &--offSmall {
-      width: 80px;
-      height: 35px;
-      background: $blueRomance;
-      border: 1px solid $blueRomance;
+      width: 65px;
+      height: 40px;
+      background: $indigo;
+      border: 1px solid $indigo;
+      font-size: 14px;
+      line-height: 2.7;
     }
 
     &--onSmall {
-      width: 50px;
-      height: 25px;
-      background: $purple;
-      border: 1px solid $purple;
+      width: 55px;
+      height: 30px;
+      background: $indigo;
+      border: 1px solid $indigo;
+      font-size: 12px;
+      line-height: 2.2;
     }
-
-  /*  &--onSmall:after {
-      width: 10px;
-      height: calc(100% - 0.5px);
-      left: calc(100% - 10.5px);
-      border-radius: 2px;
-      font-size: 8px;
-    }*/
 
     &--play {
       width: 140px;
+      height: 50px;
+      line-height: 2.7;
     }
 
     &--on {
       border-radius: 25px;
+      height: 45px;
+      line-height: 2.5;
     }
 
   }
@@ -718,21 +725,25 @@ body {
   &__size + &__label:after {
     content: '';
     position: absolute;
-    left: calc(100% - 15px);
-    width: 15px;
+    left: calc(100% - 19%);
+    width: 20%;
     height: calc(100%);
     border-radius: 5px;
     background: $white;
     color: $white;
     right: 5px;
-    transition: 0.5s;
+    -webkit-transition: 0.4s;
+  }
+
+  &__play + &__label:after {
+    left: calc(100% - 14%);
+    width: 15%;
   }
 
   &__on + &__label:after {
     position: absolute;
-   // top: 2px;
-    width: 30px;
-    height: 35px;
+    width: 40px;
+    height: 43px;
     border-radius: 25px;
   }
 
@@ -741,10 +752,12 @@ body {
   &__colors:checked + &__label:before,
   &__size:checked + &__label:before {
     content: 'Off';
-    background: $silverSand;
-    border: $silverSand;
+    background: $alto;
+    border: $alto;
     color: $black;
-    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    transform-origin: 100% 100%;
+    transition: all 0.3s linear;
   }
 
   &__play:checked + &__label:after,
