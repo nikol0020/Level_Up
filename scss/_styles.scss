@@ -545,6 +545,11 @@ body {
     margin: 6% 0;
     font-size: $fontDescriptionSize;
     font-weight: 600;
+
+    @media #{$bp-mobile} {
+      margin: 20% 0;
+    }
+
   }
 
   &__email {
