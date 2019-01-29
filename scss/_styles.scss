@@ -609,7 +609,7 @@ body {
     border-radius: 5px;
     color: $white;
     text-align: center;
-    transform: scaleX(0);
+    transform:translateX(100%);
     transform-origin: 100% 100%;
     transition: all 0.3s linear;
   }
@@ -755,9 +755,9 @@ body {
     background: $alto;
     border: $alto;
     color: $black;
-    -webkit-transform: scaleX(1);
+    transform:translateX(0%);
     transform-origin: 100% 100%;
-    transition: all 0.3s linear;
+    transition: all 0.28s linear;
   }
 
   &__play:checked + &__label:after,
