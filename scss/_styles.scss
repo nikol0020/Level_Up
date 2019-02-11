@@ -1,9 +1,9 @@
 body {
+  @include getRow();
   font: 16px/25px $defaultFont !important;
   color: $defaultText !important;
   box-sizing: border-box;
   background-color: $defaultBackground !important;
-  @include getRow();
 }
 
 // HEADER START
@@ -58,7 +58,7 @@ body {
   }
 
   &__phone {
-    @include link ();
+    @include link();
     padding-left: 15px;
     text-align: left;
     float: left;
@@ -82,10 +82,10 @@ body {
   }
 
   &__call {
-    @include link ();
+    @include link();
     text-align: right;
     padding-right: 15px;
-    float: right !important;
+    float: right;
   }
 
   &__list {
@@ -126,14 +126,14 @@ body {
     color: $colorLink;
   }
 
-  &, &:before,
-  &:after {
+  &, &::before,
+  &::after {
     border-top: 2px solid $headerItemColor;
     transition: all .3s;
   }
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     position: absolute;
     content: "";
     display: block;
@@ -141,11 +141,11 @@ body {
     right: 0;
   }
 
-  &:before {
+  &::before {
     top: 7px;
   }
 
-  &:after {
+  &::after {
     top: 17px;
   }
 
@@ -153,12 +153,12 @@ body {
     border-top-color: transparent;
   }
 
-  &.opened:after {
+  &.opened::after {
     transform: rotate(45deg);
     top: 12px;
   }
 
-  &.opened:before {
+  &.opened::before {
     transform: rotate(-45deg);
     top: 12px;
   }
@@ -169,6 +169,7 @@ body {
 
   @media #{$bp-mobile} {
     display: block;
+    margin-left: 30px;
   }
 
 }
@@ -315,7 +316,7 @@ body {
 
 //GALLERY START
 .gallery {
-  @include title_section ();
+  @include title_section();
   @include center();
   background: $fontBackgroundSectionOdd;
 
@@ -387,9 +388,13 @@ body {
 
 //CONSULTATION START
 .consultation {
-  @include title_section ();
+  @include title_section();
   @include center();
   background: $fontBackgroundSectionEven;
+
+  &__title {
+    text-align: left;
+  }
 
   &__container {
     margin: -64px 0 100px 0;
@@ -447,7 +452,7 @@ body {
     margin: -64px 0 100px 0;
   }
 
-  &__portret {
+  &__portrait {
     margin: 50px 0;
   }
 
@@ -476,7 +481,7 @@ body {
     width: 70%;
     margin: 10px auto;
 
-    &:before {
+    &::before {
       position: absolute;
       top: 20%;
       left: -10%;
@@ -495,7 +500,7 @@ body {
     .testimonials__items {
       width: 45%;
       margin-left: 25%;
-      &:before {
+      &::before {
         top: 35%;
         left: -3%;
       }
@@ -507,7 +512,7 @@ body {
     .testimonials__items {
       width: 50%;
       margin-left: 25%;
-      &:before {
+      &::before {
         top: 30%;
         left: -5%;
       }
@@ -519,7 +524,7 @@ body {
     .testimonials__items {
       width: 50%;
       margin-left: 25%;
-      &:before {
+      &::before {
         top: 20%;
         left: -10%;
       }
@@ -533,7 +538,7 @@ body {
 //CONTACT START
 .contact {
   @include center();
-  @include title_section ();
+  @include title_section();
   background: $fontBackgroundSectionEven;
 
   &__container {
@@ -602,10 +607,10 @@ body {
     align-items: baseline;
   }
 
-  &__play + &__label:before,
-  &__colors + &__label:before,
-  &__on + &__label:before,
-  &__size + &__label:before {
+  &__play + &__label::before,
+  &__colors + &__label::before,
+  &__on + &__label::before,
+  &__size + &__label::before {
     content: '';
     position: absolute;
     left: 0;
@@ -631,7 +636,7 @@ body {
     width: 80px;
     height: 40px;
     border-radius: 5px;
-    color: $white;
+    color: $defaultFill;
     text-align: center;
     cursor: pointer;
     overflow: hidden;
@@ -640,7 +645,7 @@ body {
     transition: all 0.3s linear;
     font-weight: 500;
 
-    &--darkBlue {
+    &--indigo {
       background: $indigo;
       border: 1px solid $indigo;
     }
@@ -665,14 +670,14 @@ body {
       border: 1px solid $chestnutRose;
     }
 
-    &--offMid {
+    &--middle {
       background: $indigo;
       border: 1px solid $indigo;
       font-size: 14px;
       line-height: 2.6;
     }
 
-    &--offLarge {
+    &--large {
       width: 120px;
       height: 60px;
       background: $indigo;
@@ -680,7 +685,7 @@ body {
       line-height: 3.5;
     }
 
-    &--onMid {
+    &--mid {
       width: 85px;
       height: 45px;
       background: $indigo;
@@ -688,7 +693,7 @@ body {
       line-height: 2.6;
     }
 
-    &--offSmall {
+    &--small {
       width: 65px;
       height: 40px;
       background: $indigo;
@@ -697,7 +702,7 @@ body {
       line-height: 2.7;
     }
 
-    &--onSmall {
+    &--little {
       width: 55px;
       height: 30px;
       background: $indigo;
@@ -720,42 +725,42 @@ body {
 
   }
 
-  &__on + &__label:before {
+  &__on + &__label::before {
     border-radius: 25px;
   }
 
-  &__play + &__label:after,
-  &__colors + &__label:after,
-  &__on + &__label:after,
-  &__size + &__label:after {
+  &__play + &__label::after,
+  &__colors + &__label::after,
+  &__on + &__label::after,
+  &__size + &__label::after {
     content: '';
     position: absolute;
     left: calc(100% - 19%);
     width: 20%;
     height: calc(100%);
     border-radius: 5px;
-    background: $white;
-    color: $white;
+    background: $defaultFill;
+    color: $defaultFill;
     right: 5px;
     -webkit-transition: 0.4s;
   }
 
-  &__play + &__label:after {
+  &__play + &__label::after {
     left: calc(100% - 14%);
     width: 15%;
   }
 
-  &__on + &__label:after {
+  &__on + &__label::after {
     position: absolute;
     width: 40px;
     height: 43px;
     border-radius: 25px;
   }
 
-  &__play:checked + &__label:before,
-  &__on:checked + &__label:before,
-  &__colors:checked + &__label:before,
-  &__size:checked + &__label:before {
+  &__play:checked + &__label::before,
+  &__on:checked + &__label::before,
+  &__colors:checked + &__label::before,
+  &__size:checked + &__label::before {
     content: 'Off';
     background: $alto;
     border: $alto;
@@ -765,13 +770,13 @@ body {
     transition: all 0.28s linear;
   }
 
-  &__play:checked + &__label:after,
-  &__colors:checked + &__label:after,
-  &__size:checked + &__label:after {
+  &__play:checked + &__label::after,
+  &__colors:checked + &__label::after,
+  &__size:checked + &__label::after {
     left: calc(1%);
   }
 
-  &__on:checked + &__label:after {
+  &__on:checked + &__label::after {
     left: calc(1% - 15px);
   }
 

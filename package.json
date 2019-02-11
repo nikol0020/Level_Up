@@ -1,0 +1,25 @@
+{
+  "name": "miami",
+  "version": "1.0.0",
+  "description": "для запуска app необходимо установить sass, bootstrap-sass, npm\r для этого необходимо выполнить следующие команды:\r npm install\r npm install node-sass\r npm install -g sass\r npm i bootstrap-sass",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "node-sass": "^4.11.0",
+    "npm": "^6.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikol0020/Level_Up.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikol0020/Level_Up/issues"
+  },
+  "homepage": "https://github.com/nikol0020/Level_Up#readme"
+}
